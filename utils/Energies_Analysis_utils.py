@@ -1,6 +1,7 @@
 __author__ = "@Tssp"
 import numpy as np
 import os
+import sympy as sp
 
 def transpose_energies(Data):
     '''Inputs the Data list and outputs a dictionary with the evolution of the energy levels
@@ -26,7 +27,10 @@ def transpose_energies(Data):
         dic['nivel_{}'.format(j)] = out
     return dic
 
-def dic_from_least_bound_forward(dic):
+
+
+
+def dic_from_least_bound_forward(dic, wx):
     '''Inputs the dictionary of the transposed data, detects the least bound state (LBS) and the first trap state and filters
        the dictionary from the LBS forwards.
        
@@ -42,7 +46,7 @@ def dic_from_least_bound_forward(dic):
        i-1: Least bound state position.
        
     '''
-    
+    L = len(dic.keys())
     for i in range(L):
         if dic['nivel_{}'.format(i)][0] > 0:
             print("Least bound state: ", i-1, dic['nivel_{}'.format(i-1)][0]/wx)
@@ -51,3 +55,24 @@ def dic_from_least_bound_forward(dic):
     for j in range(1, i):
         del dic['nivel_{}'.format(j-1)]
     return dic, i-1
+
+
+
+
+def cross_points(f, g):
+    ''' This function takes the numpy 1-degree linear polyfit variables that contains the slope in the
+        [0] position and the intercept in [1] of two different functions f and g and returns the cross
+        point between them.
+        
+        
+        Parameters
+        ----------
+        f: 1-degree linear polyfit variable.
+        g: 1-degree linear polyfit variable.
+        
+        Returns
+        -------
+        Cross point between f and g.
+    '''
+    x = sp.symbols('x')
+    return float(sp.solve(f[0]*x + f[1] - (g[0]*x + g[1]))[0])
