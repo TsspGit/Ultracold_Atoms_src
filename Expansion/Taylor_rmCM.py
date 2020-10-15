@@ -128,7 +128,7 @@ coeff_y = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, ky1_value, ky2_v
 print(f'Expansion in the Z axis up to {nz1}th order for the first atom and {nz2}th order for the second:\n')
 coeff_z = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, kz1_value, kz2_value, Vz1_value, Vz2_value, nz1, nz2)
 
-f = open("expansion_coeff.txt", "a")
+f = open(f"out/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_ix{Ix1}iy{Iy1}iz{Iz1}_coeff.txt", "a")
 f.write(str(atom1) + '\n')
 f.write(str(atom2) + '\n')
 f.write(str(alpha1) + '\n')
@@ -144,6 +144,11 @@ for line in coeff_y:
 for line in coeff_z:
     f.write(str(line) + '\n')
 f.close()
+
+print(f"\nout/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_ix{Ix1}iy{Iy1}iz{Iz1}_coeff.txt")
+
+
+
 # ### Archivo de salida:
 # Nombre del átomo 1
 # 
