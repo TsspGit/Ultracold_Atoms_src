@@ -145,7 +145,7 @@ for line in coeff_z:
     f.write(str(line) + '\n')
 f.close()
 
-print(f"\nout/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_ix{Ix1}iy{Iy1}iz{Iz1}_coeff.txt")
+print(f"\nout/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_ix{Ix1}iy{Iy1}iz{Iz1}.coeff")
 
 
 
