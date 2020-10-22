@@ -5,7 +5,7 @@ __date__ = "01/10/20"
 import numpy as np
 import matplotlib.pyplot as plt
 from math import pi
-from input_DVR_3D import hbar, m, Ix, Iy, Iz, n, pot, wL, alpha, delta, xmax, xmin
+from input_DVR_3D import hbar, m, Ix, Iy, Iz, n, pot, wL, alpha, delta, xmax, xmin, mode
 from method import DVR_method
 plt.rc('text',usetex=True)
 plt.rc('font',family='serif')
@@ -27,6 +27,7 @@ wx = np.sqrt(2 * Vx/m) * kx
 print(f""" 
            Potential      =    {pot}
            order (Taylor) =    {n}
+           mass (a.u)     =    {m}
            Ix(mW/cm2)     =    {Ix * 6.436409310e15}
            Iy(mW/cm2)     =    {Iy * 6.436409310e15}
            Iz(mW/cm2)     =    {Iz * 6.436409310e15}
@@ -49,19 +50,27 @@ print(f"""
 x = np.arange(xmin, xmax, delta)
 N = len(x)
 print("\nX Axis: \n")
-Ex, _ = DVR_method(N, delta, kx, x, Vx, wx)
+Ex, _ = DVR_method(N, delta, kx, x, Vx, wx, mode)
 
 print("\nY Axis: \n")
-Ey, _ = DVR_method(N, delta, kx, x, Vy, wx)
+Ey, _ = DVR_method(N, delta, kx, x, Vy, wx, mode)
 
 print("\nZ Axis: \n")
-Ez, _ =DVR_method(N, delta, kx, x, Vz, wx)
+Ez, _ =DVR_method(N, delta, kx, x, Vz, wx, mode)
 
-print("\nEx + Ey + Ez: \n")
+print("\nEx + Ey + Ez for two atoms: \n")
 Et = Ex + Ey + Ez
-print("           n        E                       E[hbar wx]")
-for i in range(11):
-    print('          ', i, Et[i],'   ', Et[i]/wx)
+print("        (nx,ny,nz)           E                 E[hbar wx]")
+for i in range(5):
+    if i%2 == 0:
+        for j in range(5):
+            if j%2 == 0:
+                for k in range(11):
+                    if k%2 == 0:
+                        if mode == 'all':
+                            print(f'          ({i},{j},{k}) {2*(Ex[i] + Ey[j] + Ez[k])}   {2*(Ex[i] + Ey[j] + Ez[k])/wx}')
+                        elif mode == 'CM':
+                            print(f'          ({i},{j},{k}) {(Ex[i] + Ey[j] + Ez[k])}   {(Ex[i] + Ey[j] + Ez[k])/wx}')
 print("\nBingo !")
 
 
