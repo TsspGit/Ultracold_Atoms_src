@@ -56,7 +56,7 @@ print("\nY Axis: \n")
 Ey, _ = DVR_method(N, delta, kx, x, Vy, wx, mode)
 
 print("\nZ Axis: \n")
-Ez, _ =DVR_method(N, delta, kx, x, Vz, wx, mode)
+Ez, _ = DVR_method(N, delta, kx, x, Vz, wx, mode)
 
 print("\nEx + Ey + Ez for two atoms: \n")
 Et = Ex + Ey + Ez
@@ -65,7 +65,7 @@ for i in range(5):
     if i%2 == 0:
         for j in range(5):
             if j%2 == 0:
-                for k in range(11):
+                for k in range(13):
                     if k%2 == 0:
                         if mode == 'all':
                             print(f'          ({i},{j},{k}) {2*(Ex[i] + Ey[j] + Ez[k])}   {2*(Ex[i] + Ey[j] + Ez[k])/wx}')
