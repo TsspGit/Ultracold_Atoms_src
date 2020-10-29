@@ -4,7 +4,7 @@ import numpy as np
 from input_DVR_3D import hbar, m, n, pot, mode
 from math import pi
 
-def DVR_method(N, delta, k, x, Vj, wx, mode='all'):
+def DVR_method(N, delta, k, x, Vj, w, mode='all'):
     '''
     Parameters
     ----------
@@ -13,7 +13,7 @@ def DVR_method(N, delta, k, x, Vj, wx, mode='all'):
     k: wavenumber in the j direction
     x: grid points
     V: Potential depth in the j direction
-    wx: frequency in X direction
+    w: frequency in X direction
     mode: all for rm+cm contributions or CM for center of mass computation.
     Returns
     -------
@@ -65,6 +65,6 @@ def DVR_method(N, delta, k, x, Vj, wx, mode='all'):
     cn = cn[:,inds[::1]]
     print("           n        E                       E[hbar wx]")
     for i in range(11):
-        print('          ', i, E[i],'   ', E[i]/wx)
+        print('          ', i, E[i],'   ', E[i]/w)
     print("\nBingo !")
     return E, cn

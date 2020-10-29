@@ -23,7 +23,12 @@ kx = 2*pi/wL
 Vx = alpha * Ix
 Vy = alpha * Iy
 Vz = alpha * Iz
-wx = np.sqrt(2 * Vx/m) * kx
+if mode == 'CM':
+  wx = np.sqrt(4 * Vx/m) * kx
+elif mode == 'all':
+  wx = np.sqrt(2 * Vx/m) * kx
+
+
 print(f""" 
            Potential      =    {pot}
            order (Taylor) =    {n}
