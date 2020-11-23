@@ -24,9 +24,9 @@ Vx = alpha * Ix
 Vy = alpha * Iy
 Vz = alpha * Iz
 if mode == 'CM':
-  wx = np.sqrt(4 * Vx/m) * kx
+    wx = np.sqrt(4 * Vx/m) * kx
 elif mode == 'all':
-  wx = np.sqrt(2 * Vx/m) * kx
+    wx = np.sqrt(2 * Vx/m) * kx
 
 
 print(f""" 
@@ -70,19 +70,12 @@ for i in range(5):
     if i%2 == 0:
         for j in range(5):
             if j%2 == 0:
-                for k in range(13):
+                for k in range(3):
                     if k%2 == 0:
                         if mode == 'all':
                             print(f'          ({i},{j},{k}) {2*(Ex[i] + Ey[j] + Ez[k])}   {2*(Ex[i] + Ey[j] + Ez[k])/wx}')
                         elif mode == 'CM':
                             print(f'          ({i},{j},{k}) {(Ex[i] + Ey[j] + Ez[k])}   {(Ex[i] + Ey[j] + Ez[k])/wx}')
+if mode == 'all':
+    print(f'ECM(b) + Erel(1) + W = {(Ex[0] + Ey[0] + Ez[0]) + Ex[1]}')
 print("\nBingo !")
-
-
-
-
-
-
-
-
-

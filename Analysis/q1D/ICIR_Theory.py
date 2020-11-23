@@ -8,7 +8,7 @@ from numba import njit, prange
 from utils.atomic_units import ao, vo, e, hbar, me, Eh, to
 from input_ICIR_Theory import *
 
-# Parameters and Constants:
+#--------------------------------------- Parameters and Constants ---------------------------------------
 mass  = m * 1.66053873e-27 / me # a.u
 wL    = wL * 1e-9 / ao # a.u
 ky    = 2*np.pi/wL
@@ -51,49 +51,40 @@ print(f"""
            dho_y(a.u)     =    {dhoy}
            dho_z(a.u)     =    {dhoz}
            h              =    {h}
+           model          =    {model}
       """)
 
-# Energies needed for compute the integral:
-E_ICIR = wy*np.loadtxt(f'Results/ICIR_positions_{int(Ix/(1e4 / Eh * to * ao**2))}_{int(Iy/(1e4 / Eh * to * ao**2))}_{int(Iz/(1e4 / Eh * to * ao**2))}.txt')[2]
-Eo = (wx + wy + wz)/2
-print(f"""       
-                  Energies
-         -------------------------
-         E_ICIR:
-                -(0,2,0):   {E_ICIR[0]}
-                -(2,0,0):   {E_ICIR[1]}
-         Eo:                {Eo}
-         E_CM:
-                -(0,2,0):   {En_CM[0]}
-                -(2,0,0):   {En_CM[1]}
-      """)
+#--------------------------------------- Functions ---------------------------------------
+def Ecm(wx, wy, wz, nx, ny, nz):
+  '''
+  Parameters:
+  -----------
+  wj: oscillation frequencies in a.u on the 3-Axis.
+  nj: excitation levels on the 3-Axis.
 
-# Load CM and rm energies:
-folder_path = f'Simulations/ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}/orbitals/eva/'
-for file in os.listdir(folder_path + 'rm'):
-    if 'noint' in file:
-        print(f'rm/ folder, file readed:\n{file}')
-        Erm = np.loadtxt(folder_path + 'rm/' + file)[1,2]
-for file in os.listdir(folder_path + 'CM'):
-    print(f'\nCM/ folder, file readed:\n{file}')
-    ECM = np.loadtxt(folder_path + 'CM/' + file)[0,2]
-print(f"\nRelative energy of the first trap state: {Erm}\nCM fundamental energy: {ECM} ")
+  Returns:
+  --------
+  HO Energy.
+  '''
+  return wx * (nx + 0.5) + wy * (ny + 0.5) + wz * (nz + 0.5)
 
-# Calculations
-Eref = Erm + ECM
-if mode == 'C':
-    C = np.abs((E_ICIR - Eref)/wz)
-elif mode == 'W':
-    C = np.array([C, C])
-epsilon = (C*wz + 2 * ECM - En_CM - Eo)/wy
-print(f"""
-          C:       
-            -(0,2,0):   {C[0]}
-            -(2,0,0):   {C[1]}
-          epsilon:       
-            -(0,2,0):   {epsilon[0]}
-            -(2,0,0):   {epsilon[1]}
-""")
+def Ecm_n(wx, wy, wz, Vx, Vy, Vz, nx, ny, nz):
+  '''
+  Parameters:
+  -----------
+  wj: oscillation frequencies in a.u on the 3-Axis.
+  nj: excitation levels on the 3-Axis.
+  Vj: potential depths in a.u on the 3-Axis.
+
+  Returns:
+  --------
+  1st order perturbation energy for the sextic anharmonic potential.
+  '''
+  Ecm_n_harm = wx * (nx + 1/2) + wy * (ny + 1/2) + wz * (nz + 1/2)
+  Ecm_n_anharm = -1/(1152*Vx**2) * (36*(2*nx**2 + 2*nx + 1)*Vx*wx**2 - (4*nx**3 + 6*nx**2 + 8*nx + 3)*wx**3 ) + \
+  -1/(1152*Vy**2) * (36*(2*ny**2 + 2*ny + 1)*Vy*wy**2 - (4*ny**3 + 6*ny**2 + 8*ny + 3)*wy**3 ) + \
+  -1/(1152*Vz**2) * (36*(2*nz**2 + 2*nz + 1)*Vz*wz**2 - (4*nz**3 + 6*nz**2 + 8*nz + 3)*wz**3 )
+  return Ecm_n_harm + Ecm_n_anharm
 
 # Integral
 @njit(parallel=True)
@@ -114,12 +105,63 @@ def trapezoidal_int(a, b, h, eps):
     N = int((2*b-2*a)/h)
     t = np.arange(2*a, 2*b, h)
     for j in prange(N):
-        out += np.sqrt(eta_x*eta_z) * np.exp(eps*t[j]/2) / np.sqrt((1 - np.exp(-t[j]))*(1 - np.exp(-eta_x*t[j]))*(1 - np.exp(-eta_z*t[j]))) - t[j]**(-3/2)
+        out += np.sqrt(eta_x*eta_z) * np.exp(eps*t[j]/2) / \
+        np.sqrt((1 - np.exp(-t[j]))*(1 - np.exp(-eta_x*t[j]))*(1 - np.exp(-eta_z*t[j]))) - t[j]**(-3/2)
     out *= h
     return out
+#---------------------------------------------------------------------------------------------------------------------------
+
+if model == 'Numerical':
+  #Load CM and rm energies:
+  folder_path = f'Simulations/ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}/orbitals/eva/'
+  for file in os.listdir(folder_path + 'rm'):
+      if 'noint' in file:
+          print(f'rm/ folder, file readed:\n{file}')
+          Erm = np.loadtxt(folder_path + 'rm/' + file)[0,2]
+  for file in os.listdir(folder_path + 'CM'):
+      print(f'\nCM/ folder, file readed:\n{file}')
+      ECM = np.loadtxt(folder_path + 'CM/' + file)[0,2]
+
+elif model == 'Perturbation':
+  ECM = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
+  En_CM020 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 2, 0)
+  En_CM200 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 2, 0, 0)
+  En_CM = [En_CM020, En_CM200]
+  Erm = ECM
+E_ICIR = wy*np.loadtxt(f'Results/ICIR_positions_{int(Ix/(1e4 / Eh * to * ao**2))}_{int(Iy/(1e4 / Eh * to * ao**2))}_{int(Iz/(1e4 / Eh * to * ao**2))}.txt')[2]
+Eo = (wx + wy + wz)/2
+
+print(f"""
+          ECM:
+              - (0,0,0): {ECM}
+              - (0,2,0): {En_CM[0]}
+              - (2,0,0): {En_CM[1]}
+          Erm (1):       {Erm} 
+          E_ICIR:
+              -(0,2,0):  {E_ICIR[0]}
+              -(2,0,0):  {E_ICIR[1]}
+          Eo:            {Eo}
+  """)
+
+# Calculations
+Eref = Erm + ECM
+if mode == 'C':
+    C = (E_ICIR - Eref)/wz
+elif mode == 'W':
+    C = np.array([C, C])
+epsilon = (C*wz + 2 * ECM - En_CM - Eo)/wy
+print(f"""
+          C:       
+            -(0,2,0):   {C[0]}
+            -(2,0,0):   {C[1]}
+          epsilon:       
+            -(0,2,0):   {epsilon[0]}
+            -(2,0,0):   {epsilon[1]}
+""")
+
 # Create the partitions of the integral axis.
 a = h*1e-3
-b = h*1e6
+b = h*1e5
 integral020 = 0
 integral200 = 0
 for i in range(0, 7):

@@ -9,8 +9,10 @@ Iz     = 50                                               # Laser intensity in m
 wL     = 1000                                             # Wavelength in nm
 hbar   = 1                                                # Planck reduced Constant
 alpha  = 200                                              # Polarization a.u
-En_CM  = [1.5590550489957357e-10, 1.8190022319802564e-10] # (0,2,0) and (2,0.0) free energies
 h      = 1e-6                                             # Reference integration step
-mode   = 'W'                                              # Compute mode: - C computes the constant of C*hbar*wz
+model  = 'Perturbation'                                   # Energies computation: - Perturbation computes the energies using the 1st order perturbation theory
+														  #                       - Numerical reads the energies
+En_CM  = [1.5590550489957357e-10, 1.8190022319802564e-10] # (0,2,0) and (2,0.0) free energies if model=Numerical
+mode   = 'C'                                              # Compute mode: - C computes the constant of C*hbar*wz
 							                              #               - W write your own C below
-C      = 2                                                # Write value if mode=W
+C      = 1                                                # Write value if mode=W
