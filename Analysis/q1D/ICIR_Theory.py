@@ -117,17 +117,17 @@ if model == 'Numerical':
   for file in os.listdir(folder_path + 'rm'):
       if 'noint' in file:
           print(f'rm/ folder, file readed:\n{file}')
-          Erm = np.loadtxt(folder_path + 'rm/' + file)[0,2]
+          Erm = np.loadtxt(folder_path + 'rm/' + file)[1,2]
   for file in os.listdir(folder_path + 'CM'):
       print(f'\nCM/ folder, file readed:\n{file}')
       ECM = np.loadtxt(folder_path + 'CM/' + file)[0,2]
 
 elif model == 'Perturbation':
-  ECM = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
-  En_CM020 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 2, 0)
-  En_CM200 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 2, 0, 0)
-  En_CM = [En_CM020, En_CM200]
-  Erm = ECM
+      ECM = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
+      En_CM020 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 2, 0)
+      En_CM200 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 2, 0, 0)
+      En_CM = [En_CM020, En_CM200]
+      Erm = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
 E_ICIR = wy*np.loadtxt(f'Results/ICIR_positions_{int(Ix/(1e4 / Eh * to * ao**2))}_{int(Iy/(1e4 / Eh * to * ao**2))}_{int(Iz/(1e4 / Eh * to * ao**2))}.txt')[2]
 Eo = (wx + wy + wz)/2
 
