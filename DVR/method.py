@@ -1,10 +1,10 @@
 __author__ = "@Tssp"
 __date__ = "19/10/20"
 import numpy as np
-from input_DVR_3D import hbar, m, n, pot, mode
+from input_DVR_3D import hbar, n, pot, mode
 from math import pi
 
-def DVR_method(N, delta, k, x, Vj, w, mode='all'):
+def DVR_method(N, delta, m, k, x, Vj, w, mode='all'):
     '''
     Parameters
     ----------

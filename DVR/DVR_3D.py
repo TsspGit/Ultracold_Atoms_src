@@ -24,6 +24,7 @@ Vx = alpha * Ix
 Vy = alpha * Iy
 Vz = alpha * Iz
 if mode == 'CM':
+    m = 2*m
     wx = np.sqrt(4 * Vx/m) * kx
 elif mode == 'all':
     wx = np.sqrt(2 * Vx/m) * kx
@@ -55,13 +56,13 @@ print(f"""
 x = np.arange(xmin, xmax, delta)
 N = len(x)
 print("\nX Axis: \n")
-Ex, _ = DVR_method(N, delta, kx, x, Vx, wx, mode)
+Ex, _ = DVR_method(N, delta, m, kx, x, Vx, wx, mode)
 
 print("\nY Axis: \n")
-Ey, _ = DVR_method(N, delta, kx, x, Vy, wx, mode)
+Ey, _ = DVR_method(N, delta, m, kx, x, Vy, wx, mode)
 
 print("\nZ Axis: \n")
-Ez, _ = DVR_method(N, delta, kx, x, Vz, wx, mode)
+Ez, _ = DVR_method(N, delta, m, kx, x, Vz, wx, mode)
 
 print("\nEx + Ey + Ez for two atoms: \n")
 Et = Ex + Ey + Ez
