@@ -59,13 +59,14 @@ print(f"""
 if model == 'Numerical':
   #Load CM and rm energies:
   folder_path = f'Simulations/ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}/orbitals/eva/'
-  for file in os.listdir(folder_path + 'rm'):
-      if 'noint' in file:
-          print(f'rm/ folder, file readed:\n{file}')
-          Erm = np.loadtxt(folder_path + 'rm/' + file)[0,2]
-  for file in os.listdir(folder_path + 'CM'):
-      print(f'\nCM/ folder, file readed:\n{file}')
-      ECM = np.loadtxt(folder_path + 'CM/' + file)[0,2]
+  if Config == False:
+    for file in os.listdir(folder_path + 'rm'):
+        if 'noint' in file:
+            print(f'rm/ folder, file readed:\n{file}')
+            Erm = np.loadtxt(folder_path + 'rm/' + file)[0,2]
+    for file in os.listdir(folder_path + 'CM'):
+        print(f'\nCM/ folder, file readed:\n{file}')
+        ECM = np.loadtxt(folder_path + 'CM/' + file)[0,2]
 
 elif model == 'Perturbation':
       ECM = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
@@ -142,22 +143,22 @@ print(f"""
 
 if mode == 'C':
     if Config == True:
-      np.savetxt(f'Results/ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config.dat', 
+      np.savetxt(f'Results/ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config.dat', 
       [wx/wy, a_ICIR020, a_ICIR200], header='wxwy, asc020, asc200')
-      print(f'ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config.dat')
+      print(f'ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config.dat')
     else:
-      np.savetxt(f'Results/ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_exact.dat', 
+      np.savetxt(f'Results/ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_exact.dat', 
         [wx/wy, a_ICIR020, a_ICIR200], header='wxwy, asc020, asc200')
-      print(f'ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_exact.dat')
+      print(f'ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_exact.dat')
 elif mode == 'W':
     if Config == True:
-      np.savetxt(f'Results/ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config_C{C[0]}.dat', 
+      np.savetxt(f'Results/ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config_C{C[0]}.dat', 
         [wx/wy, a_ICIR020, a_ICIR200], header='wxwy, asc020, asc200')
-      print(f'ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config_C{C[0]}.dat')
+      print(f'ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_config_C{C[0]}.dat')
     else:
-      np.savetxt(f'Results/ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_C{C[0]}.dat', 
+      np.savetxt(f'Results/ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_C{C[0]}.dat', 
         [wx/wy, a_ICIR020, a_ICIR200], header='wxwy, asc020, asc200')
-      print(f'ICIR_q1d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_C{C[0]}.dat')
+      print(f'ICIR_q3d_ix{int(Ix/(1e4 / Eh * to * ao**2))}_iy{int(Iy/(1e4 / Eh * to * ao**2))}_iz{int(Iz/(1e4 / Eh * to * ao**2))}_C{C[0]}.dat')
 
 
 
