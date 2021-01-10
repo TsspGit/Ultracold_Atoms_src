@@ -14,7 +14,7 @@ model  = 'Numerical'                                      # Energies computation
 														  #                       - Numerical reads the energies
 En_CM  = [1.5460962687803033e-10, 1.7540673119226125e-10] # (0,2,0) and (2,0.0) free energies if model=Numerical DVR
 Config = False                                             # Use config energies with model=Numerical
-Econfig = 1.1348548280842503e-10                         # DVR input if model=numerical
-mode   = 'W'                                              # Compute mode: - C computes the constant of C*hbar*wz
+Econfig = 1.1348548280842503e-10                          # DVR input if model=numerical
+mode   = 'C'                                              # Compute mode: - C computes the constant of C*hbar*wz
 							                              #               - W write your own C below
 C      = 2                                                # Write value if mode=W
