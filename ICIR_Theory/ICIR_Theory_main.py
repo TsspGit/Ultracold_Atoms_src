@@ -69,7 +69,7 @@ elif model == 'Perturbation':
   ECM = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
   Erm = ECM
   En_CM = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 4, 0)
-  #Erm = ECM + wz # Simon C=1
+  Eref = Erm + ECM
 
 E_ICIR = wy*np.array(E_ICIR)
 Eo = (wx + wy + wz)/2
