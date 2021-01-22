@@ -14,10 +14,10 @@ model  = 'Numerical'                                      # Energies computation
 														  #                       - Numerical reads the energies
 Erm    = 8.250619644654524e-11                           # (0,0,0) relative motion energy (Config False)
 ECM    = 8.250619644654524e-11                           # (0,0,0) center of mass motion energy (Config False)
-En_CM  = 3.178263170132861e-10                           # (0,n,0) and (n,0.0) free energies if model=Numerical DVR
+En_CM  = 2.051627097689431e-10                           # (0,n,0) and (n,0.0) free energies if model=Numerical DVR
 Config = True                                             # Use config energies with model=Numerical
 Econfig= 1.615698448144664e-10                           # DVR input if model=numerical
-E_ICIR = 3.603054845215324                               # Energies Resonances
-mode   = 'W'                                              # Compute mode: - C computes the constant of C*hbar*wz
+E_ICIR = 3.921896895592937                               # Energies Resonances
+mode   = 'C'                                              # Compute mode: - C computes the constant of C*hbar*wz
 							                              #               - W write your own C below
 C      = 0                                                # Write value if mode=W

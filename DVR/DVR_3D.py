@@ -68,11 +68,11 @@ print("\nEx + Ey + Ez for two atoms: \n")
 Et = Ex + Ey + Ez
 print("        (nx,ny,nz)           E                 E[hbar wx]")
 for i in range(5):
-    if i%4 == 0:
+    if i%2 == 0:
         for j in range(5):
-            if j%4 == 0:
+            if j%2 == 0:
                 for k in range(5):
-                    if k%4 == 0:
+                    if k%2 == 0:
                         if mode == 'all':
                             print(f'          ({i},{j},{k}) {2*(Ex[i] + Ey[j] + Ez[k])}   {2*(Ex[i] + Ey[j] + Ez[k])/wx}')
                         elif mode == 'CM':
