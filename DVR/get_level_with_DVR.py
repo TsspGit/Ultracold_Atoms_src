@@ -1,7 +1,7 @@
 #!/usr/local/opt/python@3.8/bin/python3.8
 
 __author__ = "@Tssp"
-__date__ = "01/10/20"
+__date__ = "03/02/21"
 import numpy as np
 import matplotlib.pyplot as plt
 from math import pi
@@ -64,17 +64,20 @@ Ey, _ = DVR_method(N, delta, m, kx, x, Vy, wx, mode)
 print("\nZ Axis: \n")
 Ez, _ = DVR_method(N, delta, m, kx, x, Vz, wx, mode)
 
-print("\nEx + Ey + Ez for two atoms: \n")
 Et = Ex + Ey + Ez
-print("        (nx,ny,nz)           E                 E[hbar wx]")
-for i in range(5):
-    if i%2 == 0:
-        for j in range(5):
-            if j%2 == 0:
-                for k in range(20):
-                    if k%2 == 0:
-                        if mode == 'all':
-                            print(f'          ({i},{j},{k}) {2*(Ex[i] + Ey[j] + Ez[k])}   {2*(Ex[i] + Ey[j] + Ez[k])/wx}')
-                        elif mode == 'CM':
-                            print(f'          ({i},{j},{k}) {(Ex[i] + Ey[j] + Ez[k])}   {(Ex[i] + Ey[j] + Ez[k])/wx}')
-print("\nBingo !")
+print(f'The corresponding level is:')
+while True:
+  E_input = float(input('Introduce the energy of the level: '))
+  for i in range(5):
+      if i%2 == 0:
+          for j in range(5):
+              if j%2 == 0:
+                  for k in range(30):
+                      if k%2 == 0:
+                          if mode == 'all':
+                            if E_input == 2*(Ex[i] + Ey[j] + Ez[k]):
+                                print(f'(nx,ny,nz) = ({i}, {j}, {k})')
+                          elif mode == 'CM':
+                              if float("{:.4e}".format(E_input)) == float("{:.4e}".format(Ex[i] + Ey[j] + Ez[k])):
+                                print(f'(nx,ny,nz) = ({i},{j},{k})')
+print('\nIf the program did not show the corresponding level of the inputed energy, please try again.')
