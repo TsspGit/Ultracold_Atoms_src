@@ -78,6 +78,6 @@ while True:
                             if E_input == 2*(Ex[i] + Ey[j] + Ez[k]):
                                 print(f'(nx,ny,nz) = ({i}, {j}, {k})')
                           elif mode == 'CM':
-                              if float("{:.4e}".format(E_input)) == float("{:.4e}".format(Ex[i] + Ey[j] + Ez[k])):
+                              if float("{:.3e}".format(E_input)) == float("{:.3e}".format(Ex[i] + Ey[j] + Ez[k])):
                                 print(f'(nx,ny,nz) = ({i},{j},{k})')
 print('\nIf the program did not show the corresponding level of the inputed energy, please try again.')
