@@ -76,3 +76,35 @@ def cross_points(f, g):
     '''
     x = sp.symbols('x')
     return float(sp.solve(f[0]*x + f[1] - (g[0]*x + g[1]))[0])
+
+
+
+
+def trap_fit(dic, x, x_lims, y_lims, levels, wy, tol=10):
+    ''' This function takes the dictionary of the energy levels and find the trap line among the levels between
+    level_inf and level_sup.
+    
+    Parameters
+    ----------
+    dic   : dictionary that contains the energy levels.
+    x_lims     : tuple| (x_inf, x_sup)
+    level : tuple| (level_inf, level_sup)
+    tol   : float| trap state slope tolerance.
+    
+    Returns
+    -------
+    output  : fitted trap state
+    '''
+    m_ref = (np.diff(np.array(dic[f'nivel_{levels[0]}'])[(dic[f'nivel_{levels[0]}']/wy < y_lims[1]) & (dic[f'nivel_{levels[0]}']/wy > y_lims[0])])).min()
+    print(m_ref)
+    trap_slopes = []
+    trap_values = []
+    x_values    = []
+    for l in range(levels[0], levels[1]+1):
+        x_values    = np.concatenate((np.array(x)[(dic[f'nivel_{l}']/wy < y_lims[1]) & (dic[f'nivel_{l}']/wy > y_lims[0])], x_values))
+        trap_values = np.concatenate((np.array(dic[f'nivel_{l}'])[(dic[f'nivel_{l}']/wy < y_lims[1]) & (dic[f'nivel_{l}']/wy > y_lims[0])], trap_values))
+    trap_slopes = np.diff(trap_values)
+    trap_values = np.array(trap_values[:-1])[(trap_slopes > -tol*m_ref) & (trap_slopes < tol*m_ref)]
+    x_values    = np.array(x_values[:-1])[(trap_slopes > -tol*m_ref) & (trap_slopes < tol*m_ref)]
+    output = np.polyfit(x_values, trap_values, deg=1)
+    return output
