@@ -67,11 +67,11 @@ Ez, _ = DVR_method(N, delta, m, kx, x, Vz, wx, mode)
 print("\nEx + Ey + Ez for two atoms: \n")
 Et = Ex + Ey + Ez
 print("        (nx,ny,nz)           E                 E[hbar wx]")
-for i in range(5):
+for i in range(3):
     if i%2 == 0:
-        for j in range(5):
+        for j in range(3):
             if j%2 == 0:
-                for k in range(20):
+                for k in range(3):
                     if k%2 == 0:
                         if mode == 'all':
                             print(f'          ({i},{j},{k}) {2*(Ex[i] + Ey[j] + Ez[k])}   {2*(Ex[i] + Ey[j] + Ez[k])/wx}')
