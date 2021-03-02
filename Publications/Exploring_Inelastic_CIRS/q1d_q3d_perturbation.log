@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  28 JAN 2021 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  1 MAR 2021 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -231,22 +231,30 @@ Package color Info: Driver file: pdftex.def on input line 147.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count197
+\float@exts=\toks23
+\float@box=\box62
+\@float@everytoks=\toks24
+\@floatcapt=\box63
+)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip55
-\multirow@cntb=\count197
+\multirow@cntb=\count198
 \multirow@dima=\skip56
 \bigstrutjot=\dimen148
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box62
-\UL@hyphenbox=\box63
+\UL@box=\box64
+\UL@hyphenbox=\box65
 \UL@skip=\skip57
-\UL@hook=\toks23
+\UL@hook=\toks25
 \UL@height=\dimen149
-\UL@pe=\count198
+\UL@pe=\count199
 \UL@pixel=\dimen150
-\ULC@box=\box64
+\ULC@box=\box66
 Package: ulem 2019/11/18
 \ULdepth=\dimen151
 )
@@ -262,12 +270,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen159
 \cmidrulekern=\dimen160
 \defaultaddspace=\dimen161
-\@cmidla=\count199
-\@cmidlb=\count266
+\@cmidla=\count266
+\@cmidlb=\count267
 \@aboverulesep=\dimen162
 \@belowrulesep=\dimen163
-\@thisruleclass=\count267
-\@lastruleclass=\count268
+\@thisruleclass=\count268
+\@lastruleclass=\count269
 \@thisrulewidth=\dimen164
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -280,48 +288,88 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Info: Redefining \frak on input line 111.
 LaTeX Info: Redefining \Bbb on input line 113.
 )
-Class revtex4-1 Info: Unrecognized LaTeX tabular. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 38.
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 38.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 38.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 38.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen165
+\captionmargin@=\dimen166
+\captionwidth=\dimen167
+\caption@tempdima=\dimen168
+\caption@indent=\dimen169
+\caption@parindent=\dimen170
+\caption@hangindent=\dimen171
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecapti
+onskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr \@make
+@capt@title {#1}{#2}}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \f
+lushing \let \footnote \@footnotemark@gobble \@make@capt@title {#1}{#2}\par \en
+dgroup }{\global \@minipagefalse \hb@xt@ \hsize {\hfil \unhbox \@tempboxa \hfil
+ }}\endgroup \vskip \belowcaptionskip  on input line 1082.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count270
+\c@continuedfloat=\count271
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count272
+\c@subtable=\count273
+)
+Class revtex4-1 Info: Unrecognized LaTeX tabular. Please update this document c
+lass! (Proceeding with fingers crossed.) on input line 40.
+
+
+Class revtex4-1 Warning: Repair the float package.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 40.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 40.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 40.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count269
-\l__pdf_internal_box=\box65
+\l__kernel_color_stack_int=\count274
+\l__pdf_internal_box=\box67
 )
 (./q1d_q3d_perturbation.aux)
 \openout1 = `q1d_q3d_perturbation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count270
-\scratchdimen=\dimen165
-\scratchbox=\box66
-\nofMPsegments=\count271
-\nofMParguments=\count272
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count273
-\MPscratchDim=\dimen166
-\MPnumerator=\count274
-\makeMPintoPDFobject=\count275
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count275
+\scratchdimen=\dimen172
+\scratchbox=\box68
+\nofMPsegments=\count276
+\nofMParguments=\count277
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen173
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -331,47 +379,123 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 \openout3 = `q1d_q3d_perturbationNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-No file q1d_q3d_perturbation.bbl.
+
+Package natbib Warning: Citation `PhysRevLett.104.153202' on page 1 undefined o
+n input line 78.
+
+</Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993
+_Iz4993_Easc_solid.png, id=1, 578.16pt x 433.62pt>
+File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_I
+y4993_Iz4993_Easc_solid.png Graphic file (type png)
+<use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy
+4993_Iz4993_Easc_solid.png>
+Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
+ts/Figures/Ix4993_Iy4993_Iz4993_Easc_solid.png  used on input line 90.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+</Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993
+_Iz4993_Easc_Interpolation_v2.png, id=3, 570.933pt x 426.393pt>
+File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_I
+y4993_Iz4993_Easc_Interpolation_v2.png Graphic file (type png)
+<use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy
+4993_Iz4993_Easc_Interpolation_v2.png>
+Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
+ts/Figures/Ix4993_Iy4993_Iz4993_Easc_Interpolation_v2.png  used on input line 9
+7.
+(pdftex.def)             Requested size: 171.28122pt x 127.91888pt.
+</Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D.png,
+ id=4, 578.16pt x 433.62pt>
+File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D
+.png Graphic file (type png)
+<use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D.
+png>
+Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
+ts/Figures/ICIR_q3D.png  used on input line 105.
+(pdftex.def)             Requested size: 173.44933pt x 130.087pt.
+</Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theo
+ry_band.png, id=5, 570.933pt x 426.393pt>
+File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D
+_Theory_band.png Graphic file (type png)
+<use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_
+Theory_band.png>
+Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
+ts/Figures/ICIR_q3D_Theory_band.png  used on input line 110.
+(pdftex.def)             Requested size: 171.28122pt x 127.91888pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 103--112
+[]$[]$
+ []
+
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 103--112
+$[]$ 
+ []
+
 [1
 Non-PDF special ignored!
 <special> papersize=614.295pt,794.96999pt
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
+tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993_Iz4993_
+Easc_solid.png> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figur
+es/Ix4993_Iy4993_Iz4993_Easc_Interpolation_v2.png>]
+</Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_Theo
+ry_band_coupling.png, id=24, 570.2103pt x 426.393pt>
+File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D
+_Theory_band_coupling.png Graphic file (type png)
+<use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_
+Theory_band_coupling.png>
+Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Resul
+ts/Figures/ICIR_q1D_Theory_band_coupling.png  used on input line 128.
+(pdftex.def)             Requested size: 171.0644pt x 127.91888pt.
+
+No file q1d_q3d_perturbation.bbl.
+[2 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D.p
+ng> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_
+Theory_band.png> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figu
+res/ICIR_q1D_Theory_band_coupling.png>]
+
+Package natbib Warning: There were undefined citations.
+
 (./q1d_q3d_perturbation.aux) ) 
 Here is how much of TeX's memory you used:
- 4782 strings out of 480608
- 64529 string characters out of 5903631
- 334240 words of memory out of 5000000
- 20614 multiletter control sequences out of 15000+600000
- 538503 words of font info for 49 fonts, out of 8000000 for 9000
+ 6004 strings out of 480608
+ 88758 string characters out of 5903631
+ 354468 words of memory out of 5000000
+ 21814 multiletter control sequences out of 15000+600000
+ 538811 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,5n,27p,594b,181s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,9n,46p,595b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti9.pfb>
-Output written on q1d_q3d_perturbation.pdf (1 page, 104403 bytes).
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti9.pfb>
+Output written on q1d_q3d_perturbation.pdf (2 pages, 793158 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
