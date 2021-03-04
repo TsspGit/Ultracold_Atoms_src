@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,5 +14,45 @@ Sergey Grishkevich, Simon Sala, and Alejandro Saenz.
 \newblock \emph{Phys. Rev. A}, 84:\penalty0 062710, Dec 2011.
 \newblock \doi{10.1103/PhysRevA.84.062710}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.84.062710}.
+
+\bibitem[Chen et~al.(2020)Chen, Xiao, Zhang, and Zhang]{PhysRevA.101.053624}
+Yue Chen, Da-Wu Xiao, Ren Zhang, and Peng Zhang.
+\newblock Analytical solution for the spectrum of two ultracold atoms in a
+  completely anisotropic confinement.
+\newblock \emph{Phys. Rev. A}, 101:\penalty0 053624, May 2020.
+\newblock \doi{10.1103/PhysRevA.101.053624}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.101.053624}.
+
+\bibitem[Bougas et~al.(2020)Bougas, Mistakidis, Alshalan, and
+  Schmelcher]{PhysRevA.102.013314}
+G.~Bougas, S.~I. Mistakidis, G.~M. Alshalan, and P.~Schmelcher.
+\newblock Stationary and dynamical properties of two harmonically trapped
+  bosons in the crossover from two dimensions to one.
+\newblock \emph{Phys. Rev. A}, 102:\penalty0 013314, Jul 2020.
+\newblock \doi{10.1103/PhysRevA.102.013314}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.102.013314}.
+
+\bibitem[Idziaszek and Calarco(2006)]{PhysRevA.74.022712}
+Zbigniew Idziaszek and Tommaso Calarco.
+\newblock Analytical solutions for the dynamics of two trapped interacting
+  ultracold atoms.
+\newblock \emph{Phys. Rev. A}, 74:\penalty0 022712, Aug 2006.
+\newblock \doi{10.1103/PhysRevA.74.022712}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.74.022712}.
+
+\bibitem[Liang and Zhang(2008)]{Liang_2008}
+Jun-Jun Liang and Chao Zhang.
+\newblock Two ultracold atoms in a completely anisotropic trap.
+\newblock \emph{Physica Scripta}, 77\penalty0 (2):\penalty0 025302, feb 2008.
+\newblock \doi{10.1088/0031-8949/77/02/025302}.
+\newblock URL \url{https://doi.org/10.1088/0031-8949/77/02/025302}.
+
+\bibitem[Sala et~al.(2012)Sala, Schneider, and Saenz]{PhysRevLett.109.073201}
+Simon Sala, Philipp-Immanuel Schneider, and Alejandro Saenz.
+\newblock Inelastic confinement-induced resonances in low-dimensional quantum
+  systems.
+\newblock \emph{Phys. Rev. Lett.}, 109:\penalty0 073201, Aug 2012.
+\newblock \doi{10.1103/PhysRevLett.109.073201}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.109.073201}.
 
 \end{thebibliography}

@@ -23,6 +23,9 @@
 \usepackage{multirow}
 \usepackage{subcaption}
 \usepackage{braket}
+\usepackage{caption}
+\captionsetup{justification   = raggedright,
+              singlelinecheck = false}
 
 %\allowdisplaybreaks
 
@@ -65,7 +68,7 @@ Newtonstrasse 15, 12489 Berlin, Germany.}
 %
 %------------------------------------------------------------------------------------
 \begin{abstract}
-	In this work we study several aspects of the Inelastic CIR caused by the coupling of center-of-mass and relative motion for a system of two Lithium 		ultracold atoms in anharmonic sextic traps. We take advantage of the \abinitio calculations to ensure the CRC model robustness presented in [Phys. 	Rev. Lett. \textbf{109} 073201 (2012)] computing the exact trap relative motion energy of the resonance. The last study assumed the resonance to occur 	at a energy distance of $\hbar \omega_z$ above the free trap state limit which is in disagreement with this approach, where we found a correct value of 	$0.8\hbar \omega_z$. Furthermore, we show that in 3-D confinements the approximation is not valid as well as the theory used to compute the 		resonance positions. Finally, we describe in depth the origin of the asymmetric splitting of the Inelastic CIRs for increasing values of the trap anisotropy.
+	In this work we study several aspects of the Inelastic CIR caused by the coupling of center-of-mass and relative motion for a system of two Lithium 		ultracold atoms in anharmonic sextic traps. We take advantage of the \abinitio calculations to ensure the CRC model robustness presented in [Phys. 	Rev. Lett. \textbf{109} 073201 (2012)] computing the exact trap relative motion energy of the resonance. The last study assumed the resonance to occur 	at a energy distance of $\hbar \omega_z$ above the free trap state limit which is in disagreement with this approach, where we found a correct value of 	$0.8\hbar \omega_z$. Furthermore, we show that in 3-D confinements the approximation is invalid as well as the theory used to compute the 		resonance positions. Finally, we describe in depth the origin of the asymmetric splitting of the Inelastic CIRs for increasing values of the trap anisotropy.
 \end{abstract}
 %------------------------------------------------------------------------------------
 %\pacs{05.45.-a, 33.20.Tp, 82.20.-w}
@@ -77,8 +80,9 @@ Newtonstrasse 15, 12489 Berlin, Germany.}
 	Contar un poco de historia de la observación de este tipo de resonancias, por qué los sistemas ultrafríos están de moda (control) y resonancias de 		Feshbach (cambiar B es cambiar a). Acoplamiento CM-rm como causante de los cruces evitados, transiciones no adiabáticas y rmacionarlo con el 		teorema adiabático.
 %------------------------------------------------------------------------------------
 \section{Two-atom numerical simulations}  \label{sec:system}
-	\subsection{Hamiltonian}
-		The system is formed by two Lithium ultracold atoms that interact only via s-wave scattering due to the extremely low temperature of the gas 			leading to a spatial symmetry where rm and CM coordinates reduced the complexity of the calculations. Relative motion distance is defined as			$\bfeq{r} = \bfeq{r_1} - \bfeq{r_2}$ whereas CM coordinate as $\bfeq{R} = \frac{1}{2}(\bfeq{R_1} + \bfeq{R_2})$. The Hamiltonian is then given by:
+	In this section we present the Hamiltonian that describes the interaction between two ultracold-atoms trapped in anisotropic optical lattices (Sec.\ref{subsec:H}). Also, ab initio 	calculations to simulate the system is presented in Sec.\ref{subsec:Ab_initio}.
+	\subsection{Hamiltonian} \label{subsec:H}
+		The system is formed by two Lithium ultracold atoms that interact only via s-wave scattering due to the extremely low temperature of the gas. The 		last 	leads to a spatial symmetry where rm and CM coordinates reduce the complexity of the calculations. Relative motion distance is defined as		$\bfeq{r} = \bfeq{r_1} - \bfeq{r_2}$ whereas CM coordinate as $\bfeq{R} = \frac{1}{2}(\bfeq{R_1} + \bfeq{R_2})$. The Hamiltonian is then given 			by:
 		
 		\begin{eqnarray}
 			\mathcal{H}(\bfeq{r}, \bfeq{R}) &=& T_{CM}(\bfeq{R}) + T_{rm}(\bfeq{r}) + V_{CM}(\bfeq{R}) + 				\nonumber \\ 
@@ -86,7 +90,7 @@ Newtonstrasse 15, 12489 Berlin, Germany.}
 			 \label{eq:Hamiltonian}
 		\end{eqnarray}
 		
-		where the $T$'s are the kinetic energy operators and the $V$'s the separable potential energies for both rm and CM coordinates, while $W$ 		accounts for the rm-CM coupling, which is nonzero for anharmonic traps and for homonuclear systems. The coupling term is responsible of 			the avoided crossings and therefore of the Inelastic CIRs. $U_{int}$ is the particle-particle potential energy often described in analytic derivations by 		the pseudopotential $U_{int} = \frac{4\pi \hbar^2 a_s}{m} \delta(\bfeq{r})\frac{\partial}{\partial \bfeq{r}}$, where $a_s$ is the 3-D s-wave scattering length.
+		where the $T$'s are the kinetic energy operators and the $V$'s the separable potential energies for both rm and CM coordinates, while $W$ 		accounts for the rm-CM coupling, which is nonzero for anharmonic traps. The coupling term is responsible of 			the avoided crossings and therefore of the Inelastic CIRs. $U_{int}$ is the particle-particle potential energy often described in analytic derivations by 		the pseudopotential $U_{int} = \frac{4\pi \hbar^2 a_s}{m} \delta(\bfeq{r})\frac{\partial}{\partial \bfeq{r}}$, where $a_s$ is the 3-D s-wave scattering length.
 		
 		In a 3-dimensional optical trap the potential terms are
 		\begin{eqnarray}
@@ -95,70 +99,98 @@ Newtonstrasse 15, 12489 Berlin, Germany.}
 			W(\bfeq{r}, \bfeq{R}) &=& -4 \sum_{j=x,y,z} V_j \sin^2 \left(\frac{1}{2}k r_j \right) \sin^2 \left(k R_j \right).
 		\end{eqnarray}
 		
-		$k$ is the angular wavenumber and $V_j$ is the potential depth in any direction. Associated with the potential depth, the trap frequency are 			$\omega_j = k_j\sqrt{\frac{2V_j}{m}}$ and the characteristic trap length $d_j = \sqrt{\frac{2\hbar}{m\omega_j}}$. Thus, the anisotropies can be 			defined in units of the transversal component: $\eta_j = \frac{\omega_j}{\omega_y}$.
+		$k$ is the angular wavenumber and $V_j$ the potential depth in any direction. Associated with the potential depth, the trap frequency are 			$\omega_j = k\sqrt{\frac{2V_j}{m}}$ and the characteristic trap length $d_j = \sqrt{\frac{2\hbar}{m\omega_j}}$. Thus, the anisotropies can be 			defined in units of the transversal component: $\eta_j = \frac{\omega_j}{\omega_y}$.
 	
 	
-	\subsection{Ab Initio calculations}
+	\subsection{Ab Initio calculations} \label{subsec:Ab_initio}
 		Schrödinger equation is solved using the full six-dimensional Hamiltonian of eq.(\ref{eq:Hamiltonian}) in spherical coordinates. The exact 				diagonalization is carried using realistic short-range interatomic potentials: numerically Born-Oppenheimer curves. The interaction potential is then 		varied to tune the scattering length. Regarding the trap potential we expand to sixth order to account for anisotropies associated with non-vanishing 		coupling terms.  We use a basis set of B-splines and spherical harmonics for the angular dependencies. \cite{PhysRevA.84.062710}
 		
-		The computation of the eigenenergies and eigenfunctions is obtained in a two-step method as follows: (i) First, the separable part of the 				Hamiltonian is diagonalized in order to compute the eingenfunctions $\ket{\psi^{rm}_n}$ and $\ket{\Psi^{CM}_{\bfeq{m}}}$, which will be called 			\textit{orbitals} because of their similarity with the electronic orbitals used in Quantum Chemistry. (ii) The coupling remaining coupling term is solved 		building a new basis. The states of this basis are the so-called \textit{configurations} $\ket{\Phi_{n, \bfeq{m}}} = \ket{\psi^{rm}_n \Psi^{CM}_{\bfeq{m}}}$. 
+		The computation of the eigenenergies and eigenfunctions is obtained in a two-step method as follows: (i) First, the separable part of the 				Hamiltonian is diagonalized in order to compute the eingenfunctions $\ket{\psi^{rm}_n}$ and $\ket{\Psi^{CM}_{\bfeq{m}}}$, which will be called 			\textit{orbitals} because of their similarity to the electronic orbitals used in Quantum Chemistry. (ii) The coupling remaining term is solved 				building a new basis. The states of this basis are the so-called \textit{configurations} $\ket{\Phi_{n, \bfeq{m}}} = \ket{\psi^{rm}_n \Psi^{CM}_{\bfeq{m}}}$. 
 		
-		Ab initio calculations are used to compute the dependence of the eigenenergies with the scattering length for a wide range of anisotropies $\eta_x$. 
-		The middle points of the avoided crossings are the positions of the Inelastic CIR that we compare with the theory predictions.
-		
-		
+		Ab initio calculations are used to compute the dependence of the eigenenergies on the scattering length for a wide range of anisotropies $\eta_x$. 
+		The center points of the avoided crossings are the positions of the Inelastic CIR that we compare with the theory predictions.
 %------------------------------------------------------------------------------------
 \section{Improving Inelastic CIR calculations}  \label{sec:theory}
-Introducción contando en profundidad el origen de las ICIR, la aproximación de Simón y lo de la C.
+	This section is devoted to dig into the CRC model used in other works to predict the Inelastic CIR positions. First, we explain its main assumptions, 		limitations of the model and we propose a method to compare ab initio and model predictions. In Sec. \ref{subsec:3D} we present the results for a 3-D 	trap: the complete dependence of the spectrum on the scattering length $a_s$ and the resonance positions for numerous anisotropies. Finally, we 		present similar results for a quasi 1-D trap in Sec. \ref{subsec:quasi 1-D}.
+	
+	In order to locate the resonance in the energy spectrum, exact solutions of the anharmonic traps are needed. However, an exact solution remains 		unknown yet. In contrast to this, an exact solution has recently been developed for fully anisotropic harmonic confinements in 			\cite{PhysRevA.101.053624} and in \cite{PhysRevA.102.013314}, where the solutions of \cite{PhysRevA.74.022712} and \cite{Liang_2008} have been 	generalized. 
+	
+	Inelastic CIRs have its origin in the avoided crossings between the relative least bound state with CM excitations $\ket{\psi^{(b)}(\bfeq{r}) \Psi_{\bfeq{n}} (\bfeq{R})}$ and the lowest trap state $\ket{\psi^{(1)}(\bfeq{r}) \Psi_{(0,0,0)} (\bfeq{R})}$ (next excited states of the trap are empty due to low thermal energies).  Thus, the crossings satisfy the relation: $E_b = E_1$, where the bound state energy is $E_b = E^{rm}_b + E^{CM}_{\bfeq{n}}$ and the trap state energy $E_1 = E^{rm}_1 + E^{CM}_{(0,0,0)}$. Theory provides an analytic expression to implicitly relate the bound relative energy with the scattering length as follows:
+	\begin{eqnarray}
+		\frac{\sqrt{\pi} d_y}{a_s} &=& \nonumber \\
+		 - \int^\infty_0 &dt& \left( \frac{\sqrt{\eta_x \eta_z} e^{\frac{\epsilon t}{2}}}{\sqrt{(1 - e^{-t}) (1 - e^{-\eta_x t}) (1 - e^{-\eta_z t})} } - t^{-\frac{3}{2}}\right). \nonumber \\
+	\label{eq:ascE}
+	\end{eqnarray}
+	
+	$\epsilon = \frac{E^{rm}_b - E_0}{\hbar \omega_y}$ is the energy shift and $E_0 = \frac{\hbar}{2}\sum_j \omega_j $ the ground state energy of the CM for a harmonic trap. Using the above expressions the energy shift can be described by:
+	\begin{equation}
+		\epsilon = \frac{E^{rm}_1 - E^{CM}_{\bfeq{n}} + E^{CM}_0 - E_0}{\hbar \omega_y}
+		\label{eq:Energy shift}
+	\end{equation}
+	
+	The two cornerstones of the CRC model are: (i) assume the anharmonicities are small enough to be treated as perturbations. (ii) The Inelastic CIR occurs when the eigenenergy $E^{rm}_1$ of the first trap state $\ket{\psi^{(1)}}$, which lies in the interval $[E_0, E_0 + 2\hbar \omega_z)$, is $E^{rm}_1 = E_0 + \hbar \omega_z$ \cite{PhysRevLett.109.073201}. In this work, we study the validity of the second assumption considering the ICIR to happen at
+	\begin{equation}
+		E^{rm}_1 = E_0 + \mathcal{C} \hbar \omega_z,
+		\label{eq:C equation}
+	\end{equation}
+	
+	where $\mathcal{C} \in [0, 2)$ is a parameter to determine using the ab initio Inelastic CIR positions. As will be later demonstrated, in the case of quasi 1-D traps, the assumption of $\mathcal{C}=1$ works relatively fine, but when more CM excitations are present or the trap is not excesively anisotropic, a smaller value of $\mathcal{C}$ is more accurate.
+	
+	Recall that $\mathcal{C} \hbar \omega_z$ gives the energy difference between the resonance energy and the asymptotic energy $E_{\infty}$ of the first excited state for $\frac{d_y}{a_s} \to \infty$ (limit of noninteracting particles). Then, the $\mathcal{C}$ parameter can be computed as
+	\begin{equation}
+		\mathcal{C} = \frac{E_{ICIR} - E_{\infty}}{\hbar \omega_z}.
+	\end{equation}
+	
+	In this manner, this approach accounts for trap anharmonicities since $E_{\infty}$ is chosen the energy of the asymptotic configuration. Furthermore, the energy of the resonance $E_{ICIR}$ is obtained with ab initio calculations, which means that also takes into account the coupling terms.    
 
-\subsection{3-D}
-jjejejeje
+\subsection{3-D} \label{subsec:3D}
+Hablar de cómo está construido el espectro, cuál es el ultimo estado ligado, el estado de la trampa, la zona en la que ocurren las resonancias, que en este caso no hay resonancias con dos excitaciones en el centro de masas sino con cuatro excitaciones.
 
-	\begin{figure}[h]
+	\begin{figure}[htbp!]
    	 \centering
-    	\includegraphics[scale=0.30]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993_Iz4993_Easc_solid.png}
+    	\includegraphics[scale=0.40]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993_Iz4993_Easc_solid.png}
     	\caption{Adiabatic Spectrum of the full coupled Hamiltonian for $^7$Li atoms confined in an isotropic sextic trapping potential with $V_x = V_y = V_z = 35.9E_r$, $\eta_x = \eta_y = 1$ and $\lambda=1000$ nm. All states bending down to $-\infty$ are molecular states originating from the rm bound state $\psi^{(b)}$ with different CM excitations, whereas the states remaining constant are trap states of different rm excitations $\psi^{1}$ and zero CM excitations.}
     	\label{fig:3D spectrum}
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[htbp!]
    	 \centering
-    	\includegraphics[scale=0.30]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993_Iz4993_Easc_Interpolation_v2.png}
+    	\includegraphics[scale=0.40]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993_Iz4993_Easc_Interpolation_v2.png}
     	\caption{Zoom to the Inelastic CIR which arises from the avoided crossings between the first trap state and the transversally excited bound states. Diabatic states responsible of Inelastic CIR are drawn with red dashed lines and labeled by kets. For anisotropic transversal confinement the CIR splits in two due to the symmetry breaking.}
     	\label{fig:Isotropic Crossings}
 	\end{figure}
 	
-	\begin{figure}[H]
+	\begin{figure}[htbp!]
 	 \begin{subfigure}{0.5\textwidth}
 	  \centering
-	 \includegraphics[scale=0.30]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theory_Comparison.png}
+	 \includegraphics[scale=0.40]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theory_Comparison.png}
 	 \end{subfigure}
 	 \vspace{10pt}
 	 \begin{subfigure}{0.5\textwidth}
 	   \centering
-    	 \includegraphics[scale=0.30]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theory_band.png}
+    	 \includegraphics[scale=0.40]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theory_band.png}
 	 \end{subfigure}
     	\caption{Positions of the four excitations Inelastic CIR in terms of the characteristic transversal length for different values of transversal anisotropy in 3-D. Black stars are the ab initio calculations, blue dashed lines the exact theory computations with a constant $C=0.52\pm0.03$, red dashed lines $C=1$ and gray shadows the corresponding theory computations with both $C=2$ and $C=0$. }
     	\label{fig:q3d ICIR}
 	\end{figure}
 	
-	%\begin{figure}[H]
+	%\begin{figure}[htbp!]
 %\centering
 %\subfigure{\includegraphics[width=8cm, %height=6cm]{Union/dL(z)u.png}}\hspace{0.5mm}
 %\subfigure{\includegraphics[width=8cm, height=6cm]{Golf/dL(z)g.png}}
 %\label{Figura 1}
 %\caption{M�dulo de distancias respecto al redshift para los datos de Union (izquierda) y Gold (derecha).}
 %\end{figure}
-
+\newpage
 %------------------------------------------------------------------------------------
-\subsection{quasi 1-D}
-\begin{figure}[H]
+\subsection{quasi 1-D} \label{subsec:quasi 1-D}
+\begin{figure}[htbp!]
    	 \centering
-    	\includegraphics[scale=0.30]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_Theory_band_coupling.png}
+    	\includegraphics[scale=0.40]{/Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_Theory_band_coupling.png}
     	\caption{Positions of the two-excitations Inelastic CIR in terms of the characteristic transversal length for different values of transversal anisotropy in 3-D. Black stars are the ab initio calculations, blue dashed lines the exact theory computations with a constant $C=0.52\pm0.03$, red dashed lines $C=1$ and gray shadows the corresponding theory computations with both $C=2$ and $C=0$.}
     	\label{fig:q1D ICIR}
 	\end{figure}
-
+\newpage
 %------------------------------------------------------------------------------------
 \section{Origin of the asymmetric splitting of the Inelastic CIR} \label{sec:perturbation}
 Contar teoría de perturbaciones y lo que hizo Fabio
@@ -168,7 +200,6 @@ Contar teoría de perturbaciones y lo que hizo Fabio
 %------------------------------------------------------------------------------------
 \section*{Anknowledgements}
 %------------------------------------------------------------------------------------
-\section*{References}
 \bibliographystyle{unsrtnat}
 \bibliography{q1d_q3d_perturbationCitation.bib}
 
