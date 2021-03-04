@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Grishkevich et~al.(2011)Grishkevich, Sala, and
+  Saenz]{PhysRevA.84.062710}
+Sergey Grishkevich, Simon Sala, and Alejandro Saenz.
+\newblock Theoretical description of two ultracold atoms in finite
+  three-dimensional optical lattices using realistic interatomic interaction
+  potentials.
+\newblock \emph{Phys. Rev. A}, 84:\penalty0 062710, Dec 2011.
+\newblock \doi{10.1103/PhysRevA.84.062710}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.84.062710}.
+
+\end{thebibliography}
