@@ -69,8 +69,8 @@ if model == 'Numerical':
 
 elif model == 'Perturbation':
       ECM = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
-      En_CM004 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 2, 0)
-      En_CM400 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 2, 0, 0)
+      En_CM004 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 4, 0)
+      En_CM400 = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 4, 0, 0)
       En_CM = [En_CM004, En_CM400]
       Erm = Ecm_n(wx, wy, wz, Vx, Vy, Vz, 0, 0, 0)
       #Erm = ECM + wz # Simon C=1
