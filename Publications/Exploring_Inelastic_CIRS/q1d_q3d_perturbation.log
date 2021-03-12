@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  4 MAR 2021 20:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  12 MAR 2021 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -404,84 +404,49 @@ Non-PDF special ignored!
 <special> papersize=614.295pt,794.96999pt
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993
-_Iz4993_Easc_solid.png, id=26, 578.16pt x 433.62pt>
+_Iz4993_Spectrum_Zoom.png, id=26, 1148.73164pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_I
-y4993_Iz4993_Easc_solid.png Graphic file (type png)
+y4993_Iz4993_Spectrum_Zoom.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy
-4993_Iz4993_Easc_solid.png>
+4993_Iz4993_Spectrum_Zoom.png>
 Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
-ts/Figures/Ix4993_Iy4993_Iz4993_Easc_solid.png  used on input line 151.
-(pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
-</Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993
-_Iz4993_Easc_Interpolation_v2.png, id=28, 570.933pt x 426.393pt>
-File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_I
-y4993_Iz4993_Easc_Interpolation_v2.png Graphic file (type png)
-<use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy
-4993_Iz4993_Easc_Interpolation_v2.png>
-Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
-ts/Figures/Ix4993_Iy4993_Iz4993_Easc_Interpolation_v2.png  used on input line 1
-58.
-(pdftex.def)             Requested size: 228.36914pt x 170.55417pt.
+ts/Figures/Ix4993_Iy4993_Iz4993_Spectrum_Zoom.png  used on input line 152.
+(pdftex.def)             Requested size: 510.0pt x 189.30511pt.
+
+[2]
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theo
-ry_Comparison.png, id=29, 570.39098pt x 426.03165pt>
-File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D
-_Theory_Comparison.png Graphic file (type png)
-<use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_
-Theory_Comparison.png>
-Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
-ts/Figures/ICIR_q3D_Theory_Comparison.png  used on input line 166.
-(pdftex.def)             Requested size: 228.15234pt x 170.40964pt.
-</Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theo
-ry_band.png, id=30, 570.2103pt x 426.393pt>
+ry_band.png, id=33, 570.2103pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D
 _Theory_band.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_
 Theory_band.png>
 Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
-ts/Figures/ICIR_q3D_Theory_band.png  used on input line 171.
-(pdftex.def)             Requested size: 228.08008pt x 170.55417pt.
+ts/Figures/ICIR_q3D_Theory_band.png  used on input line 160.
+(pdftex.def)             Requested size: 255.0pt x 190.68443pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 164--173
- []$[]$ 
+Overfull \hbox (9.0pt too wide) in paragraph at lines 160--161
+ [][] 
  []
-
-
-Overfull \hbox (9.0pt too wide) in paragraph at lines 164--173
- $[]$ 
- []
-
-[2]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 186.
 
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_Theo
-ry_band_coupling.png, id=36, 570.2103pt x 426.393pt>
+ry_band_coupling.png, id=34, 570.2103pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D
 _Theory_band_coupling.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_
 Theory_band_coupling.png>
 Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Resul
-ts/Figures/ICIR_q1D_Theory_band_coupling.png  used on input line 189.
-(pdftex.def)             Requested size: 228.08008pt x 170.55417pt.
-(./q1d_q3d_perturbation.bbl
-Overfull \vbox (5.50653pt too high) has occurred while \output is active []
+ts/Figures/ICIR_q1D_Theory_band_coupling.png  used on input line 177.
+(pdftex.def)             Requested size: 255.0pt x 190.68443pt.
 
-
-Overfull \vbox (5.50653pt too high) has occurred while \output is active []
-
+Overfull \hbox (9.0pt too wide) in paragraph at lines 177--178
+ [][] 
+ []
 
 [3 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4
-993_Iz4993_Easc_solid.png> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Re
-sults/Figures/Ix4993_Iy4993_Iz4993_Easc_Interpolation_v2.png> </Users/tomy/PhD/
-Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theory_Comparison.png
-> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Th
-eory_band.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 17.
-
-
+993_Iz4993_Spectrum_Zoom.png> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d
+/Results/Figures/ICIR_q3D_Theory_band.png> </Users/tomy/PhD/Ultracold_Atoms_src
+/Analysis/q1d/Results/Figures/ICIR_q1D_Theory_band_coupling.png>]
+(./q1d_q3d_perturbation.bbl
 Underfull \hbox (badness 4647) in paragraph at lines 19--25
  []\OT1/cmr/m/n/9 Yue Chen, Da-Wu Xiao, Ren Zhang, and Peng
  []
@@ -539,44 +504,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--57
  /
  []
 
-) [4 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D
-_Theory_band_coupling.png>] (./q1d_q3d_perturbation.aux) ) 
+) [4] (./q1d_q3d_perturbation.aux) ) 
 Here is how much of TeX's memory you used:
- 6083 strings out of 480608
- 90101 string characters out of 5903631
- 362543 words of memory out of 5000000
- 21877 multiletter control sequences out of 15000+600000
+ 6068 strings out of 480608
+ 88895 string characters out of 5903631
+ 382593 words of memory out of 5000000
+ 21864 multiletter control sequences out of 15000+600000
  541773 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,11n,46p,999b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msbm7.pfb>
-Output written on q1d_q3d_perturbation.pdf (4 pages, 1058293 bytes).
+ 48i,11n,46p,999b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
+fonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.p
+fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm7.pfb>
+Output written on q1d_q3d_perturbation.pdf (4 pages, 1063699 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
