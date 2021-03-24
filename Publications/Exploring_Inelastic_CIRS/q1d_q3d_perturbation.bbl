@@ -55,11 +55,14 @@ Simon Sala, Philipp-Immanuel Schneider, and Alejandro Saenz.
 \newblock \doi{10.1103/PhysRevLett.109.073201}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.109.073201}.
 
-\bibitem[Fay et~al.(2020)Fay, Lindoy, Manolopoulos, and Hore]{C9FD00049F}
-Thomas~P. Fay, Lachlan~P. Lindoy, David~E. Manolopoulos, and P.~J. Hore.
-\newblock How quantum is radical pair magnetoreception?
-\newblock \emph{Faraday Discuss.}, 221:\penalty0 77--91, 2020.
-\newblock \doi{10.1039/C9FD00049F}.
-\newblock URL \url{http://dx.doi.org/10.1039/C9FD00049F}.
+\bibitem[Haller et~al.(2010)Haller, Mark, Hart, Danzl, Reichs\"ollner,
+  Melezhik, Schmelcher, and N\"agerl]{PhysRevLett.104.153203}
+Elmar Haller, Manfred~J. Mark, Russell Hart, Johann~G. Danzl, Lukas
+  Reichs\"ollner, Vladimir Melezhik, Peter Schmelcher, and Hanns-Christoph
+  N\"agerl.
+\newblock Confinement-induced resonances in low-dimensional quantum systems.
+\newblock \emph{Phys. Rev. Lett.}, 104:\penalty0 153203, Apr 2010.
+\newblock \doi{10.1103/PhysRevLett.104.153203}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.104.153203}.
 
 \end{thebibliography}

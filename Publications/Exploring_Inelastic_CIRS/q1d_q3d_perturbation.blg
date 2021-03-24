@@ -6,24 +6,24 @@ Database file #1: q1d_q3d_perturbationNotes.bib
 Database file #2: q1d_q3d_perturbationCitation.bib
 You've used 7 entries,
             2481 wiz_defined-function locations,
-            623 strings with 6480 characters,
-and the built_in function-call counts, 2974 in all, are:
+            623 strings with 6611 characters,
+and the built_in function-call counts, 3086 in all, are:
 = -- 261
-> -- 153
+> -- 177
 < -- 2
-+ -- 58
-- -- 44
-* -- 268
-:= -- 499
++ -- 66
+- -- 52
+* -- 287
+:= -- 524
 add.period$ -- 35
 call.type$ -- 7
 change.case$ -- 14
 chr.to.int$ -- 7
 cite$ -- 7
 duplicate$ -- 133
-empty$ -- 253
-format.name$ -- 55
-if$ -- 619
+empty$ -- 254
+format.name$ -- 63
+if$ -- 635
 int.to.chr$ -- 1
 int.to.str$ -- 8
 missing$ -- 7
@@ -33,10 +33,10 @@ pop$ -- 35
 preamble$ -- 1
 purify$ -- 7
 quote$ -- 0
-skip$ -- 69
+skip$ -- 68
 stack$ -- 0
-substring$ -- 137
-swap$ -- 20
+substring$ -- 140
+swap$ -- 21
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
