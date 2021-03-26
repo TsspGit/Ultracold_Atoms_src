@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -64,5 +64,13 @@ Elmar Haller, Manfred~J. Mark, Russell Hart, Johann~G. Danzl, Lukas
 \newblock \emph{Phys. Rev. Lett.}, 104:\penalty0 153203, Apr 2010.
 \newblock \doi{10.1103/PhysRevLett.104.153203}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.104.153203}.
+
+\bibitem[Lamporesi et~al.(2010)Lamporesi, Catani, Barontini, Nishida, Inguscio,
+  and Minardi]{PhysRevLett.104.153202}
+G.~Lamporesi, J.~Catani, G.~Barontini, Y.~Nishida, M.~Inguscio, and F.~Minardi.
+\newblock Scattering in mixed dimensions with ultracold gases.
+\newblock \emph{Phys. Rev. Lett.}, 104:\penalty0 153202, Apr 2010.
+\newblock \doi{10.1103/PhysRevLett.104.153202}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.104.153202}.
 
 \end{thebibliography}
