@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  26 MAR 2021 10:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  30 MAR 2021 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -395,172 +395,188 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1360) in paragraph at lines 84--86
+</Users/tomy/PhD/Ultracold_Atoms_src/General_Figures/Boundaries_And_Couplings.p
+ng, id=1, 520.94624pt x 375.4025pt>
+File: /Users/tomy/PhD/Ultracold_Atoms_src/General_Figures/Boundaries_And_Coupli
+ngs.png Graphic file (type png)
+<use /Users/tomy/PhD/Ultracold_Atoms_src/General_Figures/Boundaries_And_Couplin
+gs.png>
+Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/General_Figures/Bo
+undaries_And_Couplings.png  used on input line 87.
+(pdftex.def)             Requested size: 239.70062pt x 172.73306pt.
+ [1
+Non-PDF special ignored!
+<special> papersize=614.295pt,794.96999pt
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
+tomy/PhD/Ultracold_Atoms_src/General_Figures/Boundaries_And_Couplings.png>]
+Underfull \hbox (badness 1360) in paragraph at lines 101--103
 \OT1/cmr/m/n/10 scribes the in-ter-ac-tion be-tween two ultracold-atoms
  []
 
-[1
-Non-PDF special ignored!
-<special> papersize=614.295pt,794.96999pt
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1205) in paragraph at lines 135--139
+[2]
+Underfull \hbox (badness 1205) in paragraph at lines 152--156
 \OT1/cmr/m/n/10 tween the rel-a-tive least bound state with CM ex-
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 135--139
+Underfull \hbox (badness 1502) in paragraph at lines 152--156
 \OT1/cmr/m/n/10 ci-ta-tions $[]$ and the low-est trap state
  []
 
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993
-_Iz4993_Spectrum_Zoom.png, id=25, 1148.73164pt x 426.393pt>
+_Iz4993_Spectrum_Zoom.png, id=32, 1148.73164pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_I
 y4993_Iz4993_Spectrum_Zoom.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy
 4993_Iz4993_Spectrum_Zoom.png>
 Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
-ts/Figures/Ix4993_Iy4993_Iz4993_Spectrum_Zoom.png  used on input line 183.
+ts/Figures/Ix4993_Iy4993_Iz4993_Spectrum_Zoom.png  used on input line 200.
 (pdftex.def)             Requested size: 510.0pt x 189.30511pt.
-[2]
-Underfull \hbox (badness 2401) in paragraph at lines 193--194
+
+Underfull \hbox (badness 2401) in paragraph at lines 210--211
 []\OT1/cmr/m/n/10 Repeating the same cal-cu-la-tions for lon-gi-tu-di-nal
  []
 
+[3]
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theo
-ry_band.png, id=32, 570.2103pt x 426.393pt>
+ry_band.png, id=37, 570.2103pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D
 _Theory_band.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_
 Theory_band.png>
 Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Resul
-ts/Figures/ICIR_q3D_Theory_band.png  used on input line 197.
+ts/Figures/ICIR_q3D_Theory_band.png  used on input line 214.
 (pdftex.def)             Requested size: 255.0pt x 190.68443pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 197--198
+Overfull \hbox (9.0pt too wide) in paragraph at lines 214--215
  [][] 
  []
 
-[3 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4
-993_Iz4993_Spectrum_Zoom.png> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d
-/Results/Figures/ICIR_q3D_Theory_band.png>]
-Underfull \hbox (badness 6428) in paragraph at lines 207--208
+
+Underfull \hbox (badness 6428) in paragraph at lines 224--225
 []\OT1/cmr/m/n/10 Quasi 1-D con-fine-ment states for an ex-treme
  []
 
+[4 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4
+993_Iz4993_Spectrum_Zoom.png> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d
+/Results/Figures/ICIR_q3D_Theory_band.png>]
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_Theo
-ry_band_coupling.png, id=38, 570.2103pt x 426.393pt>
+ry_band_coupling.png, id=43, 570.2103pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D
 _Theory_band_coupling.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_
 Theory_band_coupling.png>
 Package pdftex.def Info: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Resul
-ts/Figures/ICIR_q1D_Theory_band_coupling.png  used on input line 215.
+ts/Figures/ICIR_q1D_Theory_band_coupling.png  used on input line 232.
 (pdftex.def)             Requested size: 255.0pt x 190.68443pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 215--216
+Overfull \hbox (9.0pt too wide) in paragraph at lines 232--233
  [][] 
  []
 
-[4 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_T
+[5 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_T
 heory_band_coupling.png>]
-<ICIR_scheme_Perturb.png, id=43, 460.72125pt x 354.32375pt>
+<ICIR_scheme_Perturb.png, id=48, 460.72125pt x 354.32375pt>
 File: ICIR_scheme_Perturb.png Graphic file (type png)
 <use ICIR_scheme_Perturb.png>
-Package pdftex.def Info: ICIR_scheme_Perturb.png  used on input line 280.
+Package pdftex.def Info: ICIR_scheme_Perturb.png  used on input line 297.
 (pdftex.def)             Requested size: 255.0pt x 196.11134pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 280--281
+Overfull \hbox (9.0pt too wide) in paragraph at lines 297--298
  [][] 
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 285--286
+Underfull \hbox (badness 1454) in paragraph at lines 302--303
 []\OT1/cmr/m/n/10 Changing only the lon-gi-tu-di-nal fre-quency im-plies
  []
 
-[5 <./ICIR_scheme_Perturb.png>] (./q1d_q3d_perturbation.bbl
-Underfull \hbox (badness 4647) in paragraph at lines 19--25
- []\OT1/cmr/m/n/9 Yue Chen, Da-Wu Xiao, Ren Zhang, and Peng
+[6 <./ICIR_scheme_Perturb.png>] (./q1d_q3d_perturbation.bbl
+Underfull \hbox (badness 1430) in paragraph at lines 27--34
+ \OT1/cmr/m/n/9 induced res-o-nances.  \OT1/cmr/m/it/9 Phys. Rev. Lett.\OT1/cmr
+/m/n/9 , 110:203202,
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 19--25
- \OT1/cmr/m/n/9 ul-tra-cold atoms in a com-pletely anisotropic con-fine-
+Underfull \hbox (badness 10000) in paragraph at lines 27--34
+ \OT1/cmtt/m/n/9 https : / / link . aps . org / doi / 10 . 1103 / PhysRevLett .
+
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 28--34
- []\OT1/cmr/m/n/9 G. Bougas, S. I. Mis-takidis, G. M. Al-sha-lan, and
- []
-
-
-Underfull \hbox (badness 3271) in paragraph at lines 44--49
- []\OT1/cmr/m/n/9 Jun-Jun Liang and Chao Zhang.  Two ul-tra-cold
- []
-
-
-Underfull \hbox (badness 3019) in paragraph at lines 44--49
- \OT1/cmr/m/n/9 atoms in a com-pletely anisotropic trap.  \OT1/cmr/m/it/9 Phys-
-ica
- []
-
-
-Underfull \hbox (badness 2460) in paragraph at lines 44--49
- \OT1/cmr/m/it/9 Scripta\OT1/cmr/m/n/9 , 77(2):025302, feb 2008.  doi:10.1088/0
-031-
- []
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 51--57
+Underfull \hbox (badness 1721) in paragraph at lines 48--54
  []\OT1/cmr/m/n/9 Simon Sala, Philipp-Immanuel Schnei-der, and Ale-
  []
 
 
-Underfull \hbox (badness 5954) in paragraph at lines 51--57
+Underfull \hbox (badness 3942) in paragraph at lines 48--54
  \OT1/cmr/m/n/9 jan-dro Saenz.  In-elas-tic confinement-induced res-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--57
+Underfull \hbox (badness 10000) in paragraph at lines 48--54
  \OT1/cmr/m/n/9 o-nances in low-dimensional quan-tum sys-tems.
  []
 
 
-Underfull \hbox (badness 6675) in paragraph at lines 51--57
+Underfull \hbox (badness 5050) in paragraph at lines 48--54
  \OT1/cmr/m/it/9 Phys. Rev. Lett.\OT1/cmr/m/n/9 , 109:073201, Aug 2012.  doi:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--57
+Underfull \hbox (badness 7796) in paragraph at lines 48--54
  \OT1/cmr/m/n/9 10.1103/PhysRevLett.109.073201.  URL $\OT1/cmtt/m/n/9 https : /
  /
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 60--67
- \OT1/cmr/m/n/9 Danzl, Lukas Re-ichs^^?oll-ner, Vladimir Melezhik, Pe-ter
+Underfull \hbox (badness 7704) in paragraph at lines 57--64
+ \OT1/cmr/m/n/9 URL $\OT1/cmtt/m/n/9 https : / / link . aps . org / doi / 10 . 
+1103 / PhysRevA .
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 60--67
- \OT1/cmr/m/n/9 induced res-o-nances in low-dimensional quan-tum sys-
+Underfull \hbox (badness 3302) in paragraph at lines 66--72
+ []\OT1/cmr/m/n/9 Yue Chen, Da-Wu Xiao, Ren Zhang, and Peng
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 70--75
+
+Underfull \hbox (badness 1077) in paragraph at lines 75--81
+ []\OT1/cmr/m/n/9 G. Bougas, S. I. Mis-takidis, G. M. Al-sha-lan, and
+ []
+
+[7]
+Underfull \hbox (badness 2253) in paragraph at lines 91--96
+ []\OT1/cmr/m/n/9 Jun-Jun Liang and Chao Zhang.  Two ul-tra-cold
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 91--96
+ \OT1/cmr/m/n/9 atoms in a com-pletely anisotropic trap.  \OT1/cmr/m/it/9 Phys-
+ica
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 91--96
+ \OT1/cmr/m/it/9 Scripta\OT1/cmr/m/n/9 , 77(2):025302, feb 2008.  doi:10.1088/0
+031-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--104
  \OT1/cmtt/m/n/9 https : / / link . aps . org / doi / 10 . 1103 / PhysRevLett .
- 104 .
+
  []
 
-) [7] (./q1d_q3d_perturbation.aux) ) 
+) [8] (./q1d_q3d_perturbation.aux) ) 
 Here is how much of TeX's memory you used:
- 6091 strings out of 480608
- 89477 string characters out of 5903631
- 369879 words of memory out of 5000000
- 21887 multiletter control sequences out of 15000+600000
+ 6115 strings out of 480608
+ 90522 string characters out of 5903631
+ 367199 words of memory out of 5000000
+ 21909 multiletter control sequences out of 15000+600000
  541773 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,46p,1339b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,46p,1341b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
@@ -584,10 +600,10 @@ i9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9
 .pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm7.pfb>
-Output written on q1d_q3d_perturbation.pdf (7 pages, 1165455 bytes).
+Output written on q1d_q3d_perturbation.pdf (8 pages, 1241670 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

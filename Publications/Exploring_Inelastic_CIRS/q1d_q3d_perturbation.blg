@@ -4,49 +4,44 @@ The top-level auxiliary file: q1d_q3d_perturbation.aux
 The style file: unsrtnat.bst
 Database file #1: q1d_q3d_perturbationNotes.bib
 Database file #2: q1d_q3d_perturbationCitation.bib
-Repeated entry---line 184 of file q1d_q3d_perturbationCitation.bib
- : @article{PhysRevLett.104.153202
- :                                ,
-I'm skipping whatever remains of this entry
-You've used 8 entries,
+You've used 12 entries,
             2481 wiz_defined-function locations,
-            630 strings with 6892 characters,
-and the built_in function-call counts, 3579 in all, are:
-= -- 298
-> -- 216
+            660 strings with 7807 characters,
+and the built_in function-call counts, 5292 in all, are:
+= -- 426
+> -- 342
 < -- 2
-+ -- 80
-- -- 64
-* -- 337
-:= -- 611
-add.period$ -- 40
-call.type$ -- 8
-change.case$ -- 16
-chr.to.int$ -- 8
-cite$ -- 8
-duplicate$ -- 152
-empty$ -- 290
-format.name$ -- 76
-if$ -- 734
++ -- 126
+- -- 102
+* -- 495
+:= -- 905
+add.period$ -- 54
+call.type$ -- 12
+change.case$ -- 24
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 227
+empty$ -- 428
+format.name$ -- 118
+if$ -- 1082
 int.to.chr$ -- 1
-int.to.str$ -- 9
-missing$ -- 8
-newline$ -- 64
-num.names$ -- 24
-pop$ -- 40
+int.to.str$ -- 13
+missing$ -- 12
+newline$ -- 86
+num.names$ -- 36
+pop$ -- 68
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 12
 quote$ -- 0
-skip$ -- 77
+skip$ -- 116
 stack$ -- 0
-substring$ -- 160
-swap$ -- 24
+substring$ -- 229
+swap$ -- 33
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
+type$ -- 84
 warning$ -- 0
-while$ -- 24
+while$ -- 36
 width$ -- 0
-write$ -- 143
-(There was 1 error message)
+write$ -- 198

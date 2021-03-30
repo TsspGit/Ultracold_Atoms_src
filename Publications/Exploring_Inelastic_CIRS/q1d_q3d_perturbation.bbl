@@ -1,9 +1,56 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Haller et~al.(2010)Haller, Mark, Hart, Danzl, Reichs\"ollner,
+  Melezhik, Schmelcher, and N\"agerl]{PhysRevLett.104.153203}
+Elmar Haller, Manfred~J. Mark, Russell Hart, Johann~G. Danzl, Lukas
+  Reichs\"ollner, Vladimir Melezhik, Peter Schmelcher, and Hanns-Christoph
+  N\"agerl.
+\newblock Confinement-induced resonances in low-dimensional quantum systems.
+\newblock \emph{Phys. Rev. Lett.}, 104:\penalty0 153203, Apr 2010.
+\newblock \doi{10.1103/PhysRevLett.104.153203}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.104.153203}.
+
+\bibitem[Dunjko et~al.(2011)Dunjko, Moore, Bergeman, and
+  Olshanii]{dunjko2011confinement}
+Vanja Dunjko, Michael~G Moore, Thomas Bergeman, and Maxim Olshanii.
+\newblock Confinement-induced resonances.
+\newblock \emph{Advances in Atomic, Molecular, and Optical Physics},
+  60:\penalty0 461--510, 2011.
+
+\bibitem[Sala et~al.(2013)Sala, Z\"urn, Lompe, Wenz, Murmann, Serwane, Jochim,
+  and Saenz]{PhysRevLett.110.203202}
+S.~Sala, G.~Z\"urn, T.~Lompe, A.~N. Wenz, S.~Murmann, F.~Serwane, S.~Jochim,
+  and A.~Saenz.
+\newblock Coherent molecule formation in anharmonic potentials near
+  confinement-induced resonances.
+\newblock \emph{Phys. Rev. Lett.}, 110:\penalty0 203202, May 2013.
+\newblock \doi{10.1103/PhysRevLett.110.203202}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.110.203202}.
+
+\bibitem[Schulz et~al.(2015)Schulz, Sala, and Saenz]{schulz2015resonances}
+Bruno Schulz, Simon Sala, and Alejandro Saenz.
+\newblock Resonances in ultracold dipolar atomic and molecular gases.
+\newblock \emph{New Journal of Physics}, 17\penalty0 (6):\penalty0 065002,
+  2015.
+
+\bibitem[Troppenz et~al.(2015)Troppenz, Sala, Schneider, and
+  S{\'a}enz]{Troppenz2015InelasticCR}
+M.~Troppenz, Simon Sala, P.~Schneider, and A.~S{\'a}enz.
+\newblock Inelastic confinement-induced resonances in quantum dots.
+\newblock \emph{arXiv: Mesoscale and Nanoscale Physics}, 2015.
+
+\bibitem[Sala et~al.(2012)Sala, Schneider, and Saenz]{PhysRevLett.109.073201}
+Simon Sala, Philipp-Immanuel Schneider, and Alejandro Saenz.
+\newblock Inelastic confinement-induced resonances in low-dimensional quantum
+  systems.
+\newblock \emph{Phys. Rev. Lett.}, 109:\penalty0 073201, Aug 2012.
+\newblock \doi{10.1103/PhysRevLett.109.073201}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.109.073201}.
 
 \bibitem[Grishkevich et~al.(2011)Grishkevich, Sala, and
   Saenz]{PhysRevA.84.062710}
@@ -46,24 +93,6 @@ Jun-Jun Liang and Chao Zhang.
 \newblock \emph{Physica Scripta}, 77\penalty0 (2):\penalty0 025302, feb 2008.
 \newblock \doi{10.1088/0031-8949/77/02/025302}.
 \newblock URL \url{https://doi.org/10.1088/0031-8949/77/02/025302}.
-
-\bibitem[Sala et~al.(2012)Sala, Schneider, and Saenz]{PhysRevLett.109.073201}
-Simon Sala, Philipp-Immanuel Schneider, and Alejandro Saenz.
-\newblock Inelastic confinement-induced resonances in low-dimensional quantum
-  systems.
-\newblock \emph{Phys. Rev. Lett.}, 109:\penalty0 073201, Aug 2012.
-\newblock \doi{10.1103/PhysRevLett.109.073201}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.109.073201}.
-
-\bibitem[Haller et~al.(2010)Haller, Mark, Hart, Danzl, Reichs\"ollner,
-  Melezhik, Schmelcher, and N\"agerl]{PhysRevLett.104.153203}
-Elmar Haller, Manfred~J. Mark, Russell Hart, Johann~G. Danzl, Lukas
-  Reichs\"ollner, Vladimir Melezhik, Peter Schmelcher, and Hanns-Christoph
-  N\"agerl.
-\newblock Confinement-induced resonances in low-dimensional quantum systems.
-\newblock \emph{Phys. Rev. Lett.}, 104:\penalty0 153203, Apr 2010.
-\newblock \doi{10.1103/PhysRevLett.104.153203}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.104.153203}.
 
 \bibitem[Lamporesi et~al.(2010)Lamporesi, Catani, Barontini, Nishida, Inguscio,
   and Minardi]{PhysRevLett.104.153202}
