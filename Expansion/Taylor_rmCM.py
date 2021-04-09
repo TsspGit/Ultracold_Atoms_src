@@ -6,6 +6,7 @@ from math import pi
 import numpy as np
 from input_Taylor_rmCM import *
 from method import opt_pot_expansion
+import os
 
 # Intensities for both particles in every direction:
 ####################################################
@@ -88,14 +89,16 @@ mu1_value = m1_value/(m1_value + m2_value)
 mu2_value = m2_value/(m1_value + m2_value)
 
 print(f'\nExpansion in the X axis up to {nx1}th order for the first atom and {nx2}th order for the second:')
-coeff_x = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, kx1_value, kx2_value, Vx1_value, Vx2_value, nx1, nx2)
+coeff_x, coeff_CMx, coeff_configx = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, kx1_value, kx2_value, Vx1_value, Vx2_value, nx1, nx2)
 
 print(f'\nExpansion in the Y axis up to {ny1}th order for the first atom and {ny2}th order for the second:')
-coeff_y = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, ky1_value, ky2_value, Vy1_value, Vy2_value, ny1, ny2)
+coeff_y, coeff_CMy, coeff_configy = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, ky1_value, ky2_value, Vy1_value, Vy2_value, ny1, ny2)
 
 print(f'\nExpansion in the Z axis up to {nz1}th order for the first atom and {nz2}th order for the second:')
-coeff_z = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, kz1_value, kz2_value, Vz1_value, Vz2_value, nz1, nz2)
+coeff_z, coeff_CMz, coeff_configz = opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, kz1_value, kz2_value, Vz1_value, Vz2_value, nz1, nz2)
 
+if f"{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}.coeff" in os.listdir('out/'):
+    os.remove(f"out/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}.coeff")
 f = open(f"out/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}.coeff", "a")
 f.write(str(atom1) + '\n')
 f.write(str(atom2) + '\n')
@@ -112,10 +115,60 @@ for line in coeff_y:
 for line in coeff_z:
     f.write(str(line) + '\n')
 f.close()
-
 print(f"\nout/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}.coeff")
 
+# CM
+if f"{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_CM.coeff" in os.listdir('out/'):
+    os.remove(f"out/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_CM.coeff")
+f = open(f"out/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_CM.coeff", "a")
+f.write(str(atom1) + '\n')
+f.write(str(atom2) + '\n')
+f.write(str(alpha1) + '\n')
+f.write(str(alpha1) + '\n')
+f.write(str(len(coeff_CMx) + len(coeff_CMy) + len(coeff_CMz)) + '\n')
+f.write(str(nx1) + '\n')
+f.write(str(ny1) + '\n')
+f.write(str(nz1) + '\n')
+for line in coeff_CMx:
+    f.write(str(line) + '\n')
+for line in coeff_CMy:
+    f.write(str(line) + '\n')
+for line in coeff_CMz:
+    f.write(str(line) + '\n')
+f.close()
 
+print(f"\nout/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_CM.coeff")
+
+# Config
+if f"{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_config.coeff" in os.listdir('out/'):
+    os.remove(f"out/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_config.coeff")
+f = open(f"out/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_config.coeff", "a")
+f.write(str(atom1) + '\n')
+f.write(str(atom2) + '\n')
+f.write(str(alpha1) + '\n')
+f.write(str(alpha1) + '\n')
+f.write(str(len(coeff_configx[atom1]) + len(coeff_configy[atom1]) + len(coeff_configz[atom1]) + len(coeff_configx[atom2]) + len(coeff_configy[atom2]) + len(coeff_configz[atom2])) + '\n')
+f.write(str(nx1) + '\n')
+f.write(str(ny1) + '\n')
+f.write(str(nz1) + '\n')
+f.write(str(nx2) + '\n')
+f.write(str(ny2) + '\n')
+f.write(str(nz2) + '\n')
+for line in coeff_configx[atom1]:
+    f.write(str(line) + '\n')
+for line in coeff_configy[atom1]:
+    f.write(str(line) + '\n')
+for line in coeff_configz[atom1]:
+    f.write(str(line) + '\n')
+for line in coeff_configx[atom2]:
+    f.write(str(line) + '\n')
+for line in coeff_configy[atom2]:
+    f.write(str(line) + '\n')
+for line in coeff_configz[atom2]:
+    f.write(str(line) + '\n')
+f.close()
+
+print(f"\nout/{atom1}{atom2}_nx{nx1}ny{ny1}nz{nz1}_nx{nx2}ny{ny2}nz{nz2}_ix{Ix1}iy{Iy1}iz{Iz1}_ix{Ix2}iy{Iy2}iz{Iz2}_config.coeff")
 
 # ### Archivo de salida:
 # Nombre del átomo 1

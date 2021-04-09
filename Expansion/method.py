@@ -12,7 +12,14 @@ def opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, k1_value, k2_value, V1
         mu1_value, mu2_value:    reduced mass coefficients of the atoms.
         k_value:                 wavenumber for the given axis.
         V1_value, V2_value:      potential depths
+    
+        Output
+        ------
+        coeff:                   rm, CM coefficients of the expansion.
+        coeff_CM:                CM coefficients of the expansion.
+        coeff_config:            dictionary of configuration coefficients.
     '''
+    
     nmax = np.max([n1, n2])
     x1, x2, mu1, mu2, k1, k2, V1, V2, x, X = sp.symbols('x_1 x_2 \mu_1 \mu_2 k^1 k^2 V^1_o V^2_o x X')
     dic_subs = {mu1: mu1_value,
@@ -28,10 +35,29 @@ def opt_pot_expansion(atom1, atom2, mu1_value, mu2_value, k1_value, k2_value, V1
     VoL_rmCM = VoL_expanded.subs(x2, X - x*mu1)                   # Substitute x2 by the CM-rm coordinates
     VoL_rmCM = VoL_rmCM.subs(x1, X + x*mu2)                       # Substitute x1 by the CM-rm coordinates
     VoL_rmCM_expanded = sp.expand(VoL_rmCM)                       # Expand the expression
+    print('rm-CM coefficients')
     coeff = list()
     for i in range(0, nmax+1):
         for j in range(0, nmax+1):
             if i + j <= nmax:
                 coeff.append(VoL_rmCM_expanded.coeff(x, i).coeff(X, j).subs(dic_subs))
                 print(f'rm{i}CM{j}',VoL_rmCM_expanded.coeff(x, i).coeff(X, j).subs(dic_subs))
-    return coeff
+    print('CM coefficients')
+    coeff_CM = list()
+    for i in range(0, nmax+1):
+        coeff_CM.append(VoL_rmCM_expanded.coeff(x, 0).coeff(X, i).subs(dic_subs))
+        print(VoL_rmCM_expanded.coeff(x, 0).coeff(X, i).subs(dic_subs))
+    
+    print('config coefficients')
+    coeff_config = {atom1: list(),
+                   atom2: list()}
+    #atom 1:
+    for i in range(0, n1+1):
+        coeff_config[atom1].append(VoL_expanded.coeff(x2, 0).coeff(x1, i).subs(dic_subs))
+        print(VoL_expanded.coeff(x2, 0).coeff(x1, i).subs(dic_subs))
+    #atom 2:
+    for i in range(0, n2+1):
+        coeff_config[atom2].append(VoL_expanded.coeff(x1, 0).coeff(x2, i).subs(dic_subs))
+        print(VoL_expanded.coeff(x1, 0).coeff(x2, i).subs(dic_subs))
+    
+    return coeff, coeff_CM, coeff_config
