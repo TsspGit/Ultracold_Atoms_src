@@ -12,4 +12,4 @@ alpha  = 200                  # Polarization a.u
 delta  = 50                   # Grid spacing
 xmax   = 18000                # xmax
 xmin   = -18000               # xmin
-mode   = 'CM'                 # Compute mode: all or CM
+mode   = 'all'                 # Compute mode: all or CM

@@ -3,6 +3,7 @@ __date__ = "19/10/20"
 import numpy as np
 from input_DVR_3D import hbar, n, pot, mode
 from math import pi
+import matplotlib.pyplot as plt
 
 def DVR_method(N, delta, m, k, x, Vj, w, mode='all'):
     '''
@@ -39,17 +40,23 @@ def DVR_method(N, delta, m, k, x, Vj, w, mode='all'):
     if mode == 'all':
         if n >= 6:
             V += Vj * 2/45 * (k*x)**6
+            print(Vj * 2/45 * k**6, 'x^6')
         if n >= 4:
             V += - Vj * 1/3 * (k*x)**4
+            print(Vj * 1/3 * k**4, 'x^4')
         V += Vj * (k*x)**2
+        print(Vj * k**2, 'x^2')
         #V = Vx * (2/45 * (kx*x)**6 - 1/3 * (kx*x)**4 + (kx*x)**2)
     elif mode == 'CM':
         print('Computing only CM energies')
         if n >= 6:
             V += Vj * 4/45 * (k*x)**6
+            print(Vj * 4/45 * k**6, 'x^6')
         if n >= 4:
             V += - Vj * 2/3 * (k*x)**4
+            print(- Vj * 2/3 * k**4, 'x^4')
         V += Vj * 2*(k*x)**2
+        print(Vj * 2*k**2, 'x^2')
     #V = Vx * (4/45 * (kx*x)**6 - 2/3 * (kx*x)**4 + 2*(kx*x)**2)
     if pot == 'cos2':
         V = 1 - V

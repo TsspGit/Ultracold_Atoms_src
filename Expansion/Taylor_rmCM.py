@@ -129,6 +129,9 @@ f.write(str(len(coeff_CMx) + len(coeff_CMy) + len(coeff_CMz)) + '\n')
 f.write(str(nx1) + '\n')
 f.write(str(ny1) + '\n')
 f.write(str(nz1) + '\n')
+f.write(str(nx2) + '\n')
+f.write(str(ny2) + '\n')
+f.write(str(nz2) + '\n')
 for line in coeff_CMx:
     f.write(str(line) + '\n')
 for line in coeff_CMy:
