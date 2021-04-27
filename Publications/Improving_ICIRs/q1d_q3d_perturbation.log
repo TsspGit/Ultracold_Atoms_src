@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  5 APR 2021 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.8)  26 APR 2021 17:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -409,21 +409,11 @@ Non-PDF special ignored!
 <special> papersize=614.295pt,794.96999pt
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
 tomy/PhD/Ultracold_Atoms_src/General_Figures/Boundaries_And_Couplings.png>]
-
-LaTeX Warning: Reference `subsec:quasi 1D' on page 2 undefined on input line 96
-.
-
-
 Underfull \hbox (badness 1360) in paragraph at lines 100--102
 \OT1/cmr/m/n/10 scribes the in-ter-ac-tion be-tween two ultracold-atoms
  []
 
 [2]
-
-LaTeX Warning: Reference `subsec:quasi 1D' on page 3 undefined on input line 13
-6.
-
-
 Underfull \hbox (badness 1205) in paragraph at lines 140--141
 \OT1/cmr/m/n/10 tween the rel-a-tive least bound state with CM ex-
  []
@@ -434,7 +424,7 @@ Underfull \hbox (badness 1502) in paragraph at lines 140--141
  []
 
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4993
-_Iz4993_Spectrum_Zoom.png, id=33, 1148.73164pt x 426.393pt>
+_Iz4993_Spectrum_Zoom.png, id=32, 1148.73164pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_I
 y4993_Iz4993_Spectrum_Zoom.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy
@@ -449,7 +439,7 @@ Underfull \hbox (badness 2401) in paragraph at lines 188--189
 
 [3]
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_Theo
-ry_band.png, id=38, 570.2103pt x 426.393pt>
+ry_band.png, id=37, 570.2103pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D
 _Theory_band.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/ICIR_q3D_
@@ -462,15 +452,11 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 192--193
  [][] 
  []
 
-
-LaTeX Warning: Reference `subsec:quasi 1D' on page 4 undefined on input line 19
-7.
-
 [4 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d/Results/Figures/Ix4993_Iy4
 993_Iz4993_Spectrum_Zoom.png> </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q3d
 /Results/Figures/ICIR_q3D_Theory_band.png>]
 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_Theo
-ry_band_coupling.png, id=44, 570.2103pt x 426.393pt>
+ry_band_coupling.png, id=43, 570.2103pt x 426.393pt>
 File: /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D
 _Theory_band_coupling.png Graphic file (type png)
 <use /Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_
@@ -485,7 +471,7 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 210--211
 
 [5 </Users/tomy/PhD/Ultracold_Atoms_src/Analysis/q1d/Results/Figures/ICIR_q1D_T
 heory_band_coupling.png>]
-<Figures/ICIR_scheme_Perturb.png, id=49, 460.72125pt x 354.32375pt>
+<Figures/ICIR_scheme_Perturb.png, id=48, 460.72125pt x 354.32375pt>
 File: Figures/ICIR_scheme_Perturb.png Graphic file (type png)
 <use Figures/ICIR_scheme_Perturb.png>
 Package pdftex.def Info: Figures/ICIR_scheme_Perturb.png  used on input line 27
@@ -578,50 +564,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--104
 
  []
 
-) [8] (./q1d_q3d_perturbation.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- ) 
+) [8] (./q1d_q3d_perturbation.aux) ) 
 Here is how much of TeX's memory you used:
- 6120 strings out of 480608
- 90660 string characters out of 5903631
+ 6119 strings out of 480608
+ 90642 string characters out of 5903631
  371213 words of memory out of 5000000
- 21912 multiletter control sequences out of 15000+600000
+ 21911 multiletter control sequences out of 15000+600000
  541773 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,12n,46p,1341b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on q1d_q3d_perturbation.pdf (8 pages, 1251764 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9
+.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm7.pfb>
+Output written on q1d_q3d_perturbation.pdf (8 pages, 1242861 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

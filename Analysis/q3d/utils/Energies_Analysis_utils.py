@@ -78,8 +78,7 @@ def cross_points(f, g):
     return float(sp.solve(f[0]*x + f[1] - (g[0]*x + g[1]))[0])
 
 def trap_fit(dic, x, x_lims, y_lims, levels, wy, tol=10):
-    ''' This function takes the dictionary of the energy levels and find the trap line among the levels between
-    level_inf and level_sup.
+    ''' This function takes the dictionary of the energy levels and find the trap line among the levels between level_inf and level_sup.
     
     Parameters
     ----------
