@@ -172,7 +172,7 @@ for i in range(5):
     if i%2 == 0:
         for j in range(5):
             if j%2 == 0:
-                for k in range(5):
+                for k in range(8):
                     if k%2 == 0:
                         if mode == 'all':
                             print(f'          ({i},{j},{k}) {(Ex[i] + Ey[j] + Ez[k])}   {(Ex[i] + Ey[j] + Ez[k])/wx}')
