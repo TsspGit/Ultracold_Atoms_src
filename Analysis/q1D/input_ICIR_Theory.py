@@ -13,7 +13,7 @@ h      = 1e-6                                             # Reference integratio
 model  = 'Numerical'                                      # Energies computation: - Perturbation computes the energies using the 1st order perturbation theory
 														  #                       - Numerical reads the energies
 En_CM  = [1.4942847525476374e-10, 1.4942847525476374e-10] # (0,2,0) and (2,0.0) free energies if model=Numerical DVR
-Config = False                                             # Use config energies with model=Numerical
+Config = True                                             # Use config energies with model=Numerical
 Econfig = 1.160797099979224e-10                           # DVR input if model=numerical
 mode   = 'C'                                              # Compute mode: - C computes the constant of C*hbar*wz
 							                              #               - W write your own C below

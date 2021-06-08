@@ -39,7 +39,7 @@ def Ecm_n(wx, wy, wz, Vx, Vy, Vz, nx, ny, nz):
   -1/(1152*Vz**2) * (36*(2*nz**2 + 2*nz + 1)*Vz*wz**2 - (4*nz**3 + 6*nz**2 + 8*nz + 3)*wz**3 )
   return Ecm_n_harm + Ecm_n_anharm
 
-# Integral
+# Integral [J.Liang and C.Zhang Phys. Scr. 77, 025302 (2008)]
 @njit(parallel=True)
 def trapezoidal_int(a, b, h, eps, eta_x, eta_z):
     '''
@@ -61,6 +61,31 @@ def trapezoidal_int(a, b, h, eps, eta_x, eta_z):
     for j in prange(N):
         out += np.sqrt(eta_x*eta_z) * np.exp(eps*t[j]/2) / \
         np.sqrt((1 - np.exp(-t[j]))*(1 - np.exp(-eta_x*t[j]))*(1 - np.exp(-eta_z*t[j]))) - t[j]**(-3/2)
+    out *= h
+    return out
+
+  # Integral [Yue Chen et. al (2020) PRA]
+@njit(parallel=True)
+def trapezoidal_int_v2(a, b, h, eps, eta_x, eta_z):
+    '''
+    Parameters:
+    -----------
+    a:     left limit of the X-axis
+    b:     right limit of the X-axis
+    h:     step size
+    eps:   epsilon
+    eta_j: wj/wy
+    
+    Outputs:
+    --------
+    Value of the integral applying the trapezoidal integration method: step * f(t)
+    '''
+    out = 0
+    N = int((2*b-2*a)/h)
+    t = np.arange(2*a, 2*b, h)
+    for j in prange(N):
+        out += np.sqrt(eta_x*eta_z) * np.exp((eps + 0.5*(1 + eta_x + eta_z))*t[j]) / \
+        np.sqrt(np.sinh(t[j])*np.sinh(eta_x*t[j])*np.sinh(eta_z*t[j])) - (t[j])**(-3/2)
     out *= h
     return out
 #---------------------------------------------------------------------------------------------------------------------------
