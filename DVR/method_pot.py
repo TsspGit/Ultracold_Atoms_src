@@ -58,6 +58,7 @@ def DVR_method(N, delta, m1, m2, k1, k2, x, coeff, w, mode):
         V = 0
         for i in range(len(coeff), 0, -1):
             V += coeff[i-1] * x**(i-1)
+            print(f'{coeff[i-1]} * x^{i-1}')
         # Hamiltonian:
         ##############
         H = T + np.diagflat(V)
@@ -70,6 +71,6 @@ def DVR_method(N, delta, m1, m2, k1, k2, x, coeff, w, mode):
     cn = cn[:,inds[::1]]
     print("           n        E                       E[hbar wx]")
     for i in range(11):
-        print('          ', i, E[i],'   ', E[i]/w)
+        print('          ', i, E[i],'   ', E[i]/(2*w))
     print("\nBingo !")
     return E, cn

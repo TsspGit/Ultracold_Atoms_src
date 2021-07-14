@@ -45,35 +45,36 @@ elif mode == 'all':
     coeff_x1 = list()
     for i in range(nx1+1):
         coeff_x1.append(coeff_data[i + 9])
-    coeff_y1 = list()
-    for i in range(ny1+1):
-        coeff_y1.append(coeff_data[i + 10 + nx1])
-    coeff_z1 = list()
-    for i in range(nz1+1):
-        coeff_z1.append(coeff_data[i + 11 + nx1 + ny1])
-    # Atom2
     coeff_x2 = list()
     for i in range(nx2+1):
-        coeff_x2.append(coeff_data[i + 12 + nx1 + ny1 + nz1])
+        coeff_x2.append(coeff_data[i + 10 + nx1])
+    coeff_y1 = list()
+    for i in range(ny1+1):
+        coeff_y1.append(coeff_data[i + 11 + nx1 + nx2])
+    # Atom2
     coeff_y2 = list()
     for i in range(ny2+1):
-        coeff_y2.append(coeff_data[i + 13 + nx1 + ny1 + nz1 + nx2])
+        coeff_y2.append(coeff_data[i + 12 + nx1 + nx2 + ny1])
+    coeff_z1 = list()
+    for i in range(nz1+1):
+        coeff_z1.append(coeff_data[i + 13 + nx1 + nx2 + ny1 + ny2])
     coeff_z2 = list()
     for i in range(nz2+1):
-        coeff_z2.append(coeff_data[i + 14 + nx1 + ny1 + nz1 + nx2 +ny2])
+        coeff_z2.append(coeff_data[i + 14 + nx1 + ny1 + nz1 + nx2 + ny2])
     coeff_x = [coeff_x1, coeff_x2]
     coeff_y = [coeff_y1, coeff_y2]
     coeff_z = [coeff_z1, coeff_z2]
-
-    print([coeff_x, coeff_y, coeff_z])
+    print([coeff_x1, coeff_x2])
+    print([coeff_y1, coeff_y2])
+    print([coeff_z1, coeff_z2])
 
 # Intensities for both particles in every direction readed from txt filename:
 #############################################################################
 Ix1 = np.float(coeff[coeff.find('ix')+2:coeff.find('iy')])/6.436409310e15 # a.u
-Ix2 = np.float(coeff[coeff.find('iy')+2:coeff.find('iz')])/6.436409310e15 # a.u
-Iy1 = np.float(coeff[coeff.find('iz')+2:coeff.rfind('_ix')])/6.436409310e15 # a.u
-Iy2 = np.float(coeff[coeff.rfind('ix')+2:coeff.rfind('iy')])/6.436409310e15 # a.u
-Iz1 = np.float(coeff[coeff.rfind('iy')+2:coeff.rfind('iz')])/6.436409310e15 # a.u
+Iy1 = np.float(coeff[coeff.find('iy')+2:coeff.find('iz')])/6.436409310e15 # a.u
+Iz1 = np.float(coeff[coeff.find('iz')+2:coeff.rfind('_ix')])/6.436409310e15 # a.u
+Ix2 = np.float(coeff[coeff.rfind('ix')+2:coeff.rfind('iy')])/6.436409310e15 # a.u
+Iy2 = np.float(coeff[coeff.rfind('iy')+2:coeff.rfind('iz')])/6.436409310e15 # a.u
 Iz2 = np.float(coeff[coeff.rfind('iz')+2:coeff.rfind('_')])/6.436409310e15 # a.u
 
 # Potential depths for both particles in every direction:
@@ -107,9 +108,9 @@ kz2  = 2*pi/wLz2
 ####################################################
 if mode == 'CM':
     m = m1 + m2
-    wx = np.sqrt(Vx1/m) * kx1 + np.sqrt(Vx2/m) * kx2
+    wx = np.sqrt(Vx1/m*kx1**2 + Vx2/m*kx2**2)*np.sqrt(2) # Alomejor *sqrt(2)
 elif mode == 'all':
-    wx = np.sqrt(2 * Vx1/m1) * kx1/2 + np.sqrt(2 * Vx2/m2) * kx2/2
+    wx = np.sqrt(Vx1/m1*kx1**2 + Vx2/m2*kx2**2)
 
 print(f""" 
            Atom 1                  =    {atom1}
@@ -172,7 +173,7 @@ for i in range(5):
     if i%2 == 0:
         for j in range(5):
             if j%2 == 0:
-                for k in range(8):
+                for k in range(12):
                     if k%2 == 0:
                         if mode == 'all':
                             print(f'          ({i},{j},{k}) {(Ex[i] + Ey[j] + Ez[k])}   {(Ex[i] + Ey[j] + Ez[k])/wx}')
