@@ -108,12 +108,13 @@ kz2  = 2*pi/wLz2
 ####################################################
 if mode == 'CM':
     m = m1 + m2
-    wx = np.sqrt(Vx1/m*kx1**2 + Vx2/m*kx2**2)*np.sqrt(2) # Alomejor *sqrt(2)
+    wx = np.sqrt(Vx1/m*kx1**2 + Vx2/m*kx2**2)*np.sqrt(2)
 elif mode == 'all':
     wx = np.sqrt(Vx1/m1*kx1**2 + Vx2/m2*kx2**2)
 
 print(f""" 
            Atom 1                  =    {atom1}
+           mass                    =    {m1}
            X-axis order (Taylor) 1 =    {nx1}
            Y-axis order (Taylor) 1 =    {ny1}
            Z-axis order (Taylor) 1 =    {nz1}
@@ -132,6 +133,7 @@ print(f"""
            Vz(a.u) 1               =    {Vz1}
            
            Atom 2                  =    {atom2}
+           mass                    =    {m2}
            X-axis order (Taylor) 2 =    {nx2}
            Y-axis order (Taylor) 2 =    {ny2}
            Z-axis order (Taylor) 2 =    {nz2}
@@ -158,7 +160,7 @@ print(f"""
       """)
 # xaxis:
 ########
-x = np.linspace(xmin, xmax, int((xmax-xmin)/delta))
+x = np.linspace(xmin, xmax-delta, int((xmax-xmin)/delta))
 N = len(x)
 print("\nX Axis: \n")
 Ex, _ = DVR_method(N, delta, m1, m2, kx1, kx2, x, coeff_x, wx, mode)
@@ -173,7 +175,7 @@ for i in range(5):
     if i%2 == 0:
         for j in range(5):
             if j%2 == 0:
-                for k in range(12):
+                for k in range(5):
                     if k%2 == 0:
                         if mode == 'all':
                             print(f'          ({i},{j},{k}) {(Ex[i] + Ey[j] + Ez[k])}   {(Ex[i] + Ey[j] + Ez[k])/wx}')

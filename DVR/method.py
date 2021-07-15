@@ -34,6 +34,7 @@ def DVR_method(N, delta, m, k, x, Vj, w, mode='all'):
             elif i != j:
                 T[i-1, j-1] = hbar**2/(delta**2*m) * ((-1)**(i-j)/(i-j)**2 - (-1)**(i+j)/(i+j)**2)
                 
+    #print('Kinetic operator\n', T[-3:, -3:], '\n')
     # Potential:
     ############
     V = 0
@@ -63,9 +64,13 @@ def DVR_method(N, delta, m, k, x, Vj, w, mode='all'):
     # Hamiltonian:
     ##############
     H = T + np.diagflat(V)
+    print(f'\n\nx:\n{x[-3:]}\n\n')
+    print(f'\n\nKinetic Energy:\n{T[-3:,-3:]}\n\n')
+    print(f'\n\nPotential:\n{np.diagflat(V)[-3:,-3:]}\n\n')
+    print(f'\n\nHamiltonian:\n{H[-3:,-3:]}\n\n')
     # Diagonalization:
     ##################
-    E, cn = np.linalg.eig(H)
+    E, cn = np.linalg.eigh(H)
     del T, H
     inds = E.argsort()
     E = E[inds[::1]]

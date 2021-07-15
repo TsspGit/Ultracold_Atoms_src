@@ -1,9 +1,9 @@
 __author__ = "@Tssp"
 __date__ = "08/04/21"
 
-coeff  = 'Li7Li7_nx6ny6nz6_nx6ny6nz6_ix7802iy4993iz4993_ix7802iy4993iz4993_config.coeff'
+coeff  = 'Li7Li7_nx6ny6nz6_nx6ny6nz6_ix7802iy4993iz4993_ix7802iy4993iz4993_CM.coeff'
 pot    = 'sin2'               # sin2 or cos2 expansion
-mode   = 'all'                 # Compute mode: all or CM
+mode   = 'CM'                 # Compute mode: all or CM
 delta  = 50                   # Grid spacing
 xmax   = 18000                # xmax
 xmin   = -18000               # xmin
