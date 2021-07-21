@@ -110,7 +110,8 @@ for i in range(0, 7):
           step: {h*10**(-3+i)}        
           N:    {int((2*b-2*a)/(h*10**(-3+i)))}
     ''')
-    integral += trapezoidal_int(a, b, h*10**(-3+i), epsilon, eta_x, eta_z)
+    integral += trapezoidal_int_v2(a, b, h*10**(-3+i), epsilon, eta_x, eta_z)/sqrt(2)# if v2 /sqrt(2)
+    print(integral)
     print('\nDone!\n')
     a = b
     b *= 10

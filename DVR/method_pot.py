@@ -63,7 +63,7 @@ def DVR_method(N, delta, m1, m2, k1, k2, x, coeff, w, mode):
         # Hamiltonian:
         ##############
         H = T + np.diagflat(V)
-        print(f'\n\nx:\n{x[-3:]}\n\n')
+        print(f'\n\nx:\n{x[:3]}\n\n')
         print(f'\n\nKinetic Energy:\n{T[-3:,-3:]}\n\n')
         print(f'\n\nPotential:\n{np.diagflat(V)[-3:,-3:]}\n\n')
         print(f'\n\nHamiltonian:\n{H[-3:,-3:]}\n\n')

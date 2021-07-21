@@ -109,8 +109,12 @@ kz2  = 2*pi/wLz2
 if mode == 'CM':
     m = m1 + m2
     wx = np.sqrt(Vx1/m*kx1**2 + Vx2/m*kx2**2)*np.sqrt(2)
+    wy = np.sqrt(Vy1/m*ky1**2 + Vy2/m*ky2**2)*np.sqrt(2)
+    wz = np.sqrt(Vz1/m*kz1**2 + Vz2/m*kz2**2)*np.sqrt(2)
 elif mode == 'all':
     wx = np.sqrt(Vx1/m1*kx1**2 + Vx2/m2*kx2**2)
+    wy = np.sqrt(Vy1/m1*ky1**2 + Vy2/m2*ky2**2)
+    wz = np.sqrt(Vz1/m1*kz1**2 + Vz2/m2*kz2**2)
 
 print(f""" 
            Atom 1                  =    {atom1}
@@ -151,6 +155,8 @@ print(f"""
            Vy(a.u) 2               =    {Vy2}
            Vz(a.u) 2               =    {Vz2}
            wx(a.u)                 =    {wx}
+           wy(a.u)                 =    {wy}
+           wz(a.u)                 =    {wz}
 
            General:
            delta                   =    {delta}

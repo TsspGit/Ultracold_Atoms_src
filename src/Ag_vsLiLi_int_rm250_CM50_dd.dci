@@ -1,0 +1,116 @@
+*****************************************************************************
+*                     ----------------------                                *
+*                     READ about symmetry in                                *
+*   "Tecnical report of the project 3" in file CIwith2particles.pdf         *
+*    --------------------------------------------------------------         *
+*                                                                           *
+*   **************                                                          *
+*   *INTRODUCTION*                                                          *
+*   **************                                                          *
+*                                                                           *
+*                                                                           *
+*             INPUT FILE FOR PROGRAM ci2at3d                                *
+*             ------------------------------                                *
+*                                                                           *
+* This file contains information about active orbitals (AO)                 *
+*                                                                           *
+* =====================================================================     *
+*                                                                           *
+*                                                                           *
+* Notations here:  r - relative distance coordinate                         *
+*                  R - coordinate of the center of mass                     *
+*                 	                                                    *
+*                                                                           *
+*                                                                           *
+*  NOTE1a: strings that begin without star and underlined in next line      *
+*          are keywords DO NOT MODIFY THEM                                  *
+*                       *------------------                                 *
+*                                                                           *
+*  NOTE1b: do not modify all lines which do not have asterix * in           *
+*          the begining                                                     *
+*                                                                           *
+*  NOTE2: comfigurations with new algular momentum and projection of        *
+*         angular momentum have to start in new line.                       *
+*         Format is the following:                                          *
+* {angular momentum,projection}[initial spatial "quantum" number->final one]*
+*                                                                           *
+*  NOTE3:for the same {l,m} several [in1,fn1][in2,fn2]...                   *
+*        can be given with in1>=fn1>in2>=fn2>...                            *
+*                                                                           *
+* REMEMBER!!! : angular momentum={l} and it's projection={m} do not         *
+* ------------- correspond to quantum numbers anymore!! These are just      *
+*               indices which help to access (according  to some rules)     *
+*               required active orbital. Once it is decided which active    *
+*               orbital must be used the corresponding {l,m} [a->b] must be *
+*               given in this file                                          *
+***********                                                                 *
+* SYMMETRY:                                                                 *
+* *********                                                                 *
+* NOTE4       NAME OF THE FILE  D_xxx.dci - here "D_" construct is case     *
+*             sensetive. Always give symmetry name with capital letter      *
+*             and then underscore "_"                                       *
+* NOTE4a      Name of the input file contain information about CI vector    *
+*             symmetry D_xxx.dci. D is name of the irreducible presentation.*
+*             Orbital symmetries are given in format                        *
+*              d:                                                           *
+*              D:                                                           *
+*             d is for the relative motion                                  *
+*             D is for the center-of-mass                                   *
+* NOTE4b      All possible IREP of d are given first in any order then all  *
+*             possible IREP of D are given second also in arbitrary order   *
+*                                                                           *
+* NOTE5      Every symmetry starts with certain L and M quantum numbers     *
+*                                                                           *
+* NOTE6      Every symmetry has specific set of quantum numbers. For        *
+*            example Ag symmetry does not contain neither odd L nor odd M.  *
+*            None of symmetry has M<0                                       *
+*                                                                           *
+*****************************************************************************
+*
+  ACTIVE ORBITALS:
+*-----------------
+*
+ RELATIVE COORDINATE:
+*--------------------
+*
+ ag:   [432->682]
+*
+ b1g:  [0]
+*
+ b2g:  [0]
+*
+ b3g:  [0]
+*
+ au:   [0]
+*
+ b1u:  [0]
+*
+ b2u:  [0]
+*
+ b3u:  [0]
+*
+*
+*
+ CENTER-OF-MASS COORDINATE:
+*--------------------------
+*
+ Ag:   [1->50]
+*
+ B1g:  [0]
+*
+ B2g:  [0]
+*
+ B3g:  [0]
+*
+ Au:   [0]
+*
+ B1u:  [0]
+*
+ B2u:  [0]
+*
+ B3u:  [0]
+*
+***********************************************************************
+*
+ END
+*---
