@@ -2,7 +2,8 @@
 __author__ = "@Tssp"
 __date__ = "12/01/21"
 import numpy as np
-from math import pi, sqrt
+from numpy import sqrt
+from math import pi
 import os
 from numba import njit, prange
 from scipy.special import gamma, hyp2f1
@@ -133,6 +134,7 @@ def W3D(nx, ny, nz, etax, etay, etaz, E):
     return -pi/2 * sqrt(etax*etay*etaz/2) * suma
 
 def B1_3D(nx, ny, nz, etax, etay, etaz, E, Lambda):
+    #np.seterr('raise')
     suma = 0
     for i in range(0, nx+1):
         for j in range(0, ny+1):
@@ -147,7 +149,7 @@ def B2_3D(nx, ny, nz, etax, etay, etaz, E, Lambda):
     suma = 0
     for i in range(0, nx+1):
         for j in range(0, ny+1):
-            if i%2==0 and j%2==0 and en(i, etax) + en(j, etay) + 1/2 <= E:
+            if en(i, etax) + en(j, etay) + 1/2 >= E:
                 suma += 2**(i + j - 1) * (np.exp(2*Lambda) - 1) * hyp2f1(1, 3/4 - (E - en(i, etax) - en(j, etay))/2,\
                         5/4 - (E - en(i, etax) - en(j, etay))/2, np.exp(-2*Lambda)) / (gamma((1-i)/2)**2 * gamma((1-j)/2)**2 * gamma(1+i) * gamma(1+j) * (2*(E - en(i, etax) - en(j, etay)) - 1))
     return sqrt(pi*etax*etay/np.sinh(Lambda)) * suma
