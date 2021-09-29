@@ -8,20 +8,20 @@ etaz  = 1;
 nx     = 100;
 ny     = 100;
 Eo     = 1/2*(etax + etay + etaz);
-E      = linspace(-7.5, 7.5, 200);
+E      = linspace(-7.5, 15, 600);
 
 %% Integration of A3D
 a3D = zeros(1, length(E));
 for k = 1:length(E)
     %disp(E(k));
     if E(k) < Eo
-        Lambda = 3;
+        Lambda = 4;
         beta   = linspace(1e-6, Lambda, 1e4);
         A3D    = 1/(4*pi)^(3/2) * (-exp(beta.*E(k)).* sqrt(etax*etay*etaz./(sinh(beta.*etax).*sinh(beta.*etay)...
             .*sinh(beta.*etaz))) + beta.^(-3/2));
         integral = trapz(A3D);
     elseif E(k) >= Eo
-        Lambda = 10/(E(k) - Eo);
+        Lambda = 8/(E(k) - Eo);
         beta   = linspace(1e-6, Lambda, 1e4);
         A3D    = 1/(4*pi)^(3/2) * (-exp(beta.*E(k)).* sqrt(etax*etay*etaz./(sinh(beta.*etax).*sinh(beta.*etay)...
             .*sinh(beta.*etaz))) + beta.^(-3/2));
@@ -39,7 +39,7 @@ plot(a3D, E, 'b-', 'linewidth', 2)
 xlabel('$a_{3D}/d_y$', 'Interpreter', 'latex')
 ylabel('$E/(\hbar \omega_z)$', 'Interpreter', 'latex')
 %xlim([-10, 10])
-ylim([-7.5, 12])
+ylim([-7.5, 15])
 saveas(gcf, 'as_E_isotropic.png')
 %exit;
 
@@ -65,6 +65,7 @@ for i = 0:2:nx
                  .*gamma(i+1).*gamma(j+1).*gamma(5/4 - (E - en_f(i, etax) - en_f(j, etay))/2)) .* sqrt(exp(2.*Lambda)...
                  - 1) .* hypergeom2F1(1, 3./4 - (E - en_f(i, etax) - en_f(j, etay))./2, 5./4 - (E - en_f(i, etax) - ...
                  en_f(j, etay))./2, exp(-2.*Lambda));
+
         end
     end
 end

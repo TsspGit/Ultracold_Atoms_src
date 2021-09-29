@@ -123,7 +123,7 @@ def A3D_int(a, b, h, eta_x, eta_y, eta_z, E):
 def en(n, eta):
     return eta*(n + 1/2)
 
-def W3D(nx, ny, nz, etax, etay, etaz, E):
+def W3D(nx, ny, etax, etay, etaz, E):
     suma = 0
     for i in range(0, nx+1):
         for j in range(0, ny+1):
@@ -133,7 +133,22 @@ def W3D(nx, ny, nz, etax, etay, etaz, E):
                         gamma(3/4 - (E - en(i, etax) - en(j, etay))/2))
     return -pi/2 * sqrt(etax*etay*etaz/2) * suma
 
-def B1_3D(nx, ny, nz, etax, etay, etaz, E, Lambda):
+def I3D_int(a, b, h, nx, ny, etax, etay, etaz, E):
+    N = int((2*b-2*a)/h)
+    beta = np.arange(2*a, 2*b, h)
+    out = 0
+    for k in prange(N):
+      suma = 0
+      for i in prange(0, nx+1):
+          for j in prange(0, ny+1):
+              if i%2==0 and j%2==0 and en(i, etax) + en(j, etay) + 1/2 <= E:
+                suma += 2**(i+j-1/2)*np.exp(beta[k]*(E - etax - etay))/ \
+                (gamma((1-i)/2)**2 * gamma((1-j)/2)**2 * gamma(1+i) * gamma(1+j))
+      out += sqrt(pi*etax*etay/(8*np.sinh(beta[k]))) * suma
+    out *= h
+    return A3D_int(a, b, h, etax, etay, etaz, E) + out
+
+def B1_3D(nx, ny, etax, etay, etaz, E, Lambda):
     #np.seterr('raise')
     suma = 0
     for i in range(0, nx+1):
@@ -145,7 +160,7 @@ def B1_3D(nx, ny, nz, etax, etay, etaz, E, Lambda):
                         hyp2f1(1, 3/4 - (E - en(i, etax) - en(j, etay))/2, 5/4 - (E - en(i, etax) - en(j, etay))/2, np.exp(-2*Lambda))
     return (-1) * suma
 
-def B2_3D(nx, ny, nz, etax, etay, etaz, E, Lambda):
+def B2_3D(nx, ny, etax, etay, etaz, E, Lambda):
     suma = 0
     for i in range(0, nx+1):
         for j in range(0, ny+1):

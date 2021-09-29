@@ -40,7 +40,7 @@ else
     elseif (z<=1) && (z>0.5)
         w=1-z;
     elseif z>2
-        w=1/z
+        w=1/z;
     end
     %disp(w)
     res1=hypergeom2F1_Horchler(a,a-c+1,a-b+1,w,tol)*abs(w)^a*fac1*exp(1i*pi*a);

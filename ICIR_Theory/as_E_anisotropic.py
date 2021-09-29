@@ -22,7 +22,7 @@ from input_Chen_Zhang_2020 import eta_x, eta_y, eta_z, nx, ny, nz
 
 # Energy:
 Eo = 1/2*(eta_x + eta_y + eta_z)
-E  = np.linspace(Eo, 12, num=100)
+E  = np.linspace(-7.5, 12, num=100)
 
 print(f'''
          Parameters
@@ -80,7 +80,7 @@ for i in range(1, level+1):
     plt.plot(Spectrum[f'a3D_n{i}'], Spectrum[f'E_n{i}'], 'b')
 ax.set_xlabel(r'$a_{3D}/d_y$')
 ax.set_ylabel(r'$E/(\hbar \omega_z)$')
-ax.set_xlim(-10, 10)
+#ax.set_xlim(-10, 10)
 ax.set_ylim(-7.5, 15)
 plt.grid()
 plt.show()
