@@ -7,6 +7,8 @@ from math import pi
 import os
 from numba import njit, prange
 from scipy.special import gamma, hyp2f1
+import sys
+eps = sys.float_info.epsilon
 
 #--------------------------------------- Functions ---------------------------------------
 def Ecm(wx, wy, wz, nx, ny, nz):
@@ -123,15 +125,43 @@ def A3D_int(a, b, h, eta_x, eta_y, eta_z, E):
 def en(n, eta):
     return eta*(n + 1/2)
 
-def W3D(nx, ny, etax, etay, etaz, E):
+def A3D(eta_x, eta_y, E, beta):
+    '''
+    Chen et al. (2020)
+    Parameters:
+    -----------
+    eta_j: wj/wy
+    E:     energy
+    beta:x-axis
+    
+    Outputs:
+    --------
+    Array of A3D.
+    '''
+    
+    out = -np.exp(beta*E) * np.sqrt(eta_x*eta_y/((4*pi)**3*np.sinh(eta_x*beta)*np.sinh(eta_y*beta)*np.sinh(beta)))\
+        + 1/(4*pi*beta)**(3/2)
+    return out
+
+def W3D(nx, ny, etax, etay, E):
     suma = 0
     for i in range(0, nx+1):
         for j in range(0, ny+1):
-            if i%2==0 and j%2==0 and en(i, etax) + en(j, etay) + 1/2 <= E:
+            if i%2 == 0 and j%2 == 0 and en(i, etax) + en(j, etay) + 1/2 <= E:
                 suma += 2**(i + j - 1)*gamma(1/4 - (E - en(i, etax) - en(j, etay))/2)/ \
                         (gamma((1-i)/2)**2 * gamma((1-j)/2)**2 * gamma(1+i) * gamma(1+j) * \
                         gamma(3/4 - (E - en(i, etax) - en(j, etay))/2))
-    return -pi/2 * sqrt(etax*etay*etaz/2) * suma
+    return -pi/2 * sqrt(etax*etay/2) * suma
+
+def I3D(etax, etay, nx, ny, E, beta):
+    suma = 0
+    for i in range(0, nx+1, 2):
+        for j in range(0, ny+1, 2):
+            if en(i, etax) + en(j, etay) + 1/2 <= E:
+              suma += 2**(i+j-1/2)*np.exp(beta*(E - etax - etay))/ \
+              (gamma((1-i)/2)**2 * gamma((1-j)/2)**2 * gamma(1+i) * gamma(1+j))
+    out = sqrt(pi*etax*etay/(8*np.sinh(beta))) * suma
+    return A3D(etax, etay, E, beta) + out
 
 def I3D_int(a, b, h, nx, ny, etax, etay, etaz, E):
     N = int((2*b-2*a)/h)
@@ -148,7 +178,7 @@ def I3D_int(a, b, h, nx, ny, etax, etay, etaz, E):
     out *= h
     return A3D_int(a, b, h, etax, etay, etaz, E) + out
 
-def B1_3D(nx, ny, etax, etay, etaz, E, Lambda):
+def B1_3D(nx, ny, etax, etay, E, Lambda):
     #np.seterr('raise')
     suma = 0
     for i in range(0, nx+1):
@@ -160,7 +190,7 @@ def B1_3D(nx, ny, etax, etay, etaz, E, Lambda):
                         hyp2f1(1, 3/4 - (E - en(i, etax) - en(j, etay))/2, 5/4 - (E - en(i, etax) - en(j, etay))/2, np.exp(-2*Lambda))
     return (-1) * suma
 
-def B2_3D(nx, ny, etax, etay, etaz, E, Lambda):
+def B2_3D(nx, ny, etax, etay, E, Lambda):
     suma = 0
     for i in range(0, nx+1):
         for j in range(0, ny+1):
@@ -170,11 +200,22 @@ def B2_3D(nx, ny, etax, etay, etaz, E, Lambda):
     return sqrt(pi*etax*etay/np.sinh(Lambda)) * suma
 
 def separate_levels(A, E):
+    '''
+    Parameters
+    ----------
+    - A: x-axis (usually a3D)
+    - E: y-axis (usually the energy)
+
+    Returns
+    -------
+    - dic: dictionary that contains each level separately denoted by the key "a3D_n{level}" and "E_n{level}"
+    - level: last level separated
+    '''
     dic = {}
     count = 0
     level = 0
     for i in range(len(E)-1):
-        if np.sign(A[i]) != np.sign(A[i+1]):
+        if np.sign(A[i]) != np.sign(A[i+1]) and A[i] > abs(2):
             level+=1
             dic[f'a3D_n{level}'] = A[i-count:i+1]
             dic[f'E_n{level}']   = E[i-count:i+1]
@@ -184,4 +225,10 @@ def separate_levels(A, E):
     dic[f'a3D_n{level+1}'] = A[i-count+1:i+2]
     dic[f'E_n{level+1}']   = E[i-count+1:i+2]
     return dic, level
+
+def gauss(f,n,a,b):
+    from scipy.special.orthogonal import p_roots
+    [x,w] = p_roots(n+1)
+    G=0.5*(b-a)*sum(w*f(0.5*(b-a)*x+0.5*(b+a)))
+    return G
 #---------------------------------------------------------------------------------------------------------------------------
