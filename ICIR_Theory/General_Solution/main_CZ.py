@@ -65,7 +65,7 @@ if __name__ == '__main__':
 		I3D = Integral().int(lambda x: J3D_init.I3D(Trap.eta_x, Trap.eta_y, e, x), 100, e, Trap.Eo)
 		J3D = sqrt(2)*4*pi*(J3D_init.W3D(Trap.eta_x, Trap.eta_y, e) + I3D)
 		a3D.append(1/J3D)
-	
+	print(f'a3D: [{min(a3D)} - {max(a3D)}]')
 	# Figure
 	Spectrum, level = separate_levels(a3D, E)
 	fig, ax = plt.subplots(figsize=(8,6))
