@@ -23,7 +23,7 @@ plt.rcParams['axes.titlesize']=ref_ticksize * 3/2
 
 # Energy:
 Eo = 1/2*(eta_x + eta_y + 1)
-E  = np.linspace(-4, 8.1, num=200000)
+E  = np.linspace(-7.5, 13, num=1000)
 
 print(f'''
          Parameters
@@ -39,13 +39,13 @@ print(f'''
 a3D = []
 for e in E:
     integral = 0
-    if e>Eo and e<=6:
-        #Lambda = 0.1/(e - Eo)
-        Lambda = 0.86
+    if e>Eo: #and e<=6:
+        Lambda = 0.15/(e - Eo)
+        #Lambda = 0.86
         integral = gauss(lambda x: I3D(eta_x, eta_y, nx, ny, e, x), 100, 1e-6, Lambda)
-    elif e>6:
-        Lambda = 1.1
-        integral = gauss(lambda x: I3D(eta_x, eta_y, nx, ny, e, x), 100, 1e-6, Lambda)
+    #elif e>6:
+    #    Lambda = 1.1
+    #    integral = gauss(lambda x: I3D(eta_x, eta_y, nx, ny, e, x), 100, 1e-6, Lambda)
     else:
         Lambda = 100
         integral = gauss(lambda x: I3D(eta_x, eta_y, nx, ny, e, x), 100, 1e-6, Lambda)
@@ -69,7 +69,7 @@ for i in range(1, level+1):
 ax.set_xlabel(r'$a_{3D}/d_y$')
 ax.set_ylabel(r'$E/(\hbar \omega_z)$')
 ax.set_xlim(-10, 10)
-ax.set_ylim(-4, 8.1)
+ax.set_ylim(-7.5, 12)
 plt.grid()
-#plt.savefig('E_as_anisotropic.png', dpi=200)
+plt.savefig('E_as_isotropic.png', dpi=200)
 plt.show()
