@@ -10,7 +10,7 @@ wL     = 1000                                             # Wavelength in nm
 hbar   = 1                                                # Planck reduced Constant
 alpha  = 200                                              # Polarization a.u
 h      = 1e-6                                             # Reference integration step
-model  = 'Numerical'                                      # Energies computation: - Perturbation computes the energies using the 1st order perturbation theory
+model  = 'Perturbation'                                      # Energies computation: - Perturbation computes the energies using the 1st order perturbation theory
 														  #                       - Numerical reads the energies
 Erm    = 5.276668023081494e-11                           # (0,0,0) relative motion energy (Config False)
 ECM    = 5.276668023081494e-11                           # (0,0,0) center of mass motion energy (Config False)

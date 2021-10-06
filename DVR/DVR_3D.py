@@ -26,7 +26,6 @@ Vz = alpha * Iz
 if mode == 'CM':
     m = 2*m
     wx = np.sqrt(4 * Vx/m) * kx
-    wx = 6.473918273963595e-11
 elif mode == 'all':
     wx = np.sqrt(2 * Vx/m) * kx
 
