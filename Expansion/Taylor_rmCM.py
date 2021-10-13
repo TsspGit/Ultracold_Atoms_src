@@ -108,9 +108,6 @@ f.write(str(len(coeff_x) + len(coeff_y) + len(coeff_z)) + '\n')
 f.write(str(nx1) + '\n')
 f.write(str(ny1) + '\n')
 f.write(str(nz1) + '\n')
-f.write(str(nx2) + '\n')
-f.write(str(ny2) + '\n')
-f.write(str(nz2) + '\n')
 for line in coeff_x:
     f.write(str(line) + '\n')
 for line in coeff_y:
