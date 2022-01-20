@@ -23,20 +23,21 @@
     USE global_data_plotting
     USE global_data_optical_lattice
 !   ===
-
+!   steve
+    USE MODU_COEF    
+!   ===
     IMPLICIT NONE
 !   -------------
 
     CHARACTER( 256 )        :: str_operation              ! auxiliary string that keeps temporary string values
 
 !----------------------------------------------------------------------------------------
-  CALL read_coef          ! Tomas
-  CALL crea_Indc          ! Tomas
+
   CALL global_initialize
+  CALL read_coef                             ! reading data from input files
+  CALL crea_Indc
   CALL read_data_tagtd2hm ! fabio                             ! reading data from input files
-!  CALL harmonic_values
-!write(6,*) 'w_ho : ', w_ho
-!pause
+
   CALL getenv('COORDPLOT', str_operation)
   str_operation = ADJUSTL(str_operation)
 
@@ -1695,10 +1696,9 @@
  INTEGER                   :: staterm, stateCM    ! active orbitals which must be leading in CI vector
  INTEGER                   :: stateCI		  ! CI state to plot if setted
  INTEGER                   :: nstartrm, nstartCM  ! staterm and stateCM must be recalculatend according to the XXX_x.dci content
- INTEGER                   :: nn_rm, nn_CM
 
  REAL( 8 )                 :: C_max               ! maximal coefficient
- REAL( 8 )                 :: suma, shannon_entropy
+
 !-------------------------------------------------------------------------
 
 ! %------------------------------%
@@ -1761,78 +1761,77 @@
 
   n_EVE_active = 0
 
-!*********************************
-! FABIO  
-147 continue
-  CLOSE(1001)
-  OPEN( UNIT=1001, FILE = str, STATUS='OLD', FORM = 'UNFORMATTED' )
-!   write(6,*) str
-  write(*,*)
-  write(*,*)
-  write(*,*)
-  write(*,*)
-  write(*,*)
-  write(*,*)
-  write(*,*)
-  write(*,*)
-  write(*,*) 'i_EVE?'
-  read(5,*) i_EVE
-  
-    DO k = 1, i_EVE
+
+  DO k = 1, dim_ci
+
      READ(1001) EVA
-!     do i=1,dim_ci
-!       write(6,*) k, i, EVA(i)
-!     end do
-!     pause     
+
+     I_ci = 0
+     C_max = 0.0_rk
+
+     DO i = 1, non0_IREP
+
+        j = D2h_PT(i)
+
+        DO a_AO = sym_ActOrbit_rm(i-1)+1, sym_ActOrbit_rm(i)
+
+           DO b_AO = sym_ActOrbit_CM(j-1)+1, sym_ActOrbit_CM(j)
+
+              I_ci = I_ci + 1
+
+              IF ( ABS(EVA(I_ci)) .GT. C_max ) THEN
+
+                 C_max    = ABS(EVA(I_ci))
+                 leadO_rm = a_AO
+                 leadO_CM = b_AO
+
+              END IF
+
+           END DO
+
+        END DO
+
+     END DO
+
+     IF ( (leadO_rm .EQ. staterm) .AND. (leadO_CM .EQ. stateCM) ) THEN
+ 
+!!$!test
+!!$write(*,*) k
+!!$stop
+!!$do i=1,dim_ci
+!!$   write(*,*)i,EVA(i)
+!!$end do
+!!$!end test
+
+        i_EVE = k
+
+	IF (stateCI .GT. -1) THEN
+		i_EVE = stateCI
+	ELSE
+	        n_EVE_active = n_EVE_active+1
+	
+	        IF ( n_EVE_active .GT. 1 ) THEN
+	           WRITE(*,*) 'ACTIVE ORBITALS PRESENT IN SEVERAL CI SOLUTIONS'
+	           STOP
+	        END IF
+
+		IF ( k .EQ. dim_ci ) THEN
+			WRITE(*,*) "CI vector for given active orbitals is not found"
+			STOP
+		END IF
+	END IF
+     END IF
+
   END DO
 
-  suma = 0d0
-  C_max = 0.0d0
-  shannon_entropy = 0.d0
-  do k = 1, dim_ci
-     suma = suma + EVA( k )**2   
-     IF( EVA( k )**2 .gt. 1d-14 ) THEN
-       shannon_entropy = shannon_entropy + EVA( k )**2 * dlog( EVA( k )**2 )     
-!      ELSE
-!        shannon_entropy = shannon_entropy + dlog( EVA( k )**(2d0*EVA( k )**2))
-     END IF
-     if( EVA( k )**2 .gt. C_max ) then
-       C_max = EVA( k )**2
-     end if
-  end do
-  shannon_entropy = - shannon_entropy / dlog( dfloat( dim_ci ) )
-  write(6,*) 'C_max            : ', C_max  
-  write(6,*) 'suma             : ', suma 
-  write(6,*) 'shannon_entropy  : ', shannon_entropy 
-  write(6,*) 
-  do k = 1, dim_ci
-     if( EVA( k )**2 * 100d0 / suma .gt. 15d0 ) then
-!        if( k .le. n_AO_CM ) then
-!          nn_rm = 1 + int(dfloat(k)/dfloat(n_AO_CM))
-!          nn_CM = k - ( int(dfloat(k)/dfloat(n_AO_CM)) ) * n_AO_CM     
-!        else
-!          if( int(dfloat(k)/dfloat(n_AO_CM)) .eq. k/n_AO_CM ) then
-!            nn_rm = int(dfloat(k)/dfloat(n_AO_CM))
-!            nn_CM = k + 1 - ( int(dfloat(k)/dfloat(n_AO_CM)) ) * n_AO_CM     
-!          else
-!            nn_rm = 1 + int(dfloat(k)/dfloat(n_AO_CM))
-!            nn_CM = k - ( int(dfloat(k)/dfloat(n_AO_CM)) ) * n_AO_CM               
-!          end  if       
-!        end if
-         nn_rm = 1 + int(dfloat(k)/dfloat(n_AO_CM))
-         nn_CM = k - ( int(dfloat(k)/dfloat(n_AO_CM)) ) * n_AO_CM     
-       write(6,*) k, 1 + int(dfloat(k)/dfloat(n_AO_CM)), k - ( int(dfloat(k)/dfloat(n_AO_CM)) ) * n_AO_CM
-       write(6,*) 'rm : ', nn_rm, E_ActOrbit_rm( nn_rm )
-       write(6,*) 'CM : ', nn_CM, E_ActOrbit_CM( nn_CM )
-       write(6,*) 'ci : ', k, EVA( k )**2 * 100d0 / suma, EVA( k )**2 / C_max
-       write(6,*)
-       write(6,*)
-       write(6,*)       
-     end if 
-  end do
-  goto 147
-  stop
-!*********************************
+
+  REWIND(1001)
+
+
+  DO k = 1, i_EVE
+     READ(1001) EVA
+  END DO
+
   CLOSE(1001)
 
   WRITE(*,*) "Number of CI vector ", i_EVE

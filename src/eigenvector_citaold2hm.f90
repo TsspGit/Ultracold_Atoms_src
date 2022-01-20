@@ -7,7 +7,7 @@
 ! Program plottingci comprises:
 
 !  SUBROUTINES:     initialization_tad2hm
-!  -----------      read_data_tagtd2hm
+!  -----------      read_data_taold2hm
 !                   calcul_knot_seq
 !                   finish_programm
 
@@ -30,10 +30,9 @@
     CHARACTER( 256 )        :: str_operation              ! auxiliary string that keeps temporary string values
 
 !----------------------------------------------------------------------------------------
-  CALL read_coef          ! Tomas
-  CALL crea_Indc          ! Tomas
+
   CALL global_initialize
-  CALL read_data_tagtd2hm ! fabio                             ! reading data from input files
+  CALL read_data_taold2hm ! fabio                             ! reading data from input files
 !  CALL harmonic_values
 !write(6,*) 'w_ho : ', w_ho
 !pause
