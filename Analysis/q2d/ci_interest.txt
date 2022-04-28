@@ -1,0 +1,11 @@
+Para \Delta = 0.70500
+el nivel asociado a CM(2, 0, 0) 
+(nCM=36) es:
+
+Intensities      n
+4993           560
+5505           561
+6042           561
+6604           561
+7190           561
+7802           560
