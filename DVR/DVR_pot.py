@@ -70,12 +70,12 @@ elif mode == 'all':
 
 # Intensities for both particles in every direction readed from txt filename:
 #############################################################################
-Ix1 = np.float(coeff[coeff.find('ix')+2:coeff.find('iy')])/6.436409310e15 # a.u
-Iy1 = np.float(coeff[coeff.find('iy')+2:coeff.find('iz')])/6.436409310e15 # a.u
-Iz1 = np.float(coeff[coeff.find('iz')+2:coeff.rfind('_ix')])/6.436409310e15 # a.u
-Ix2 = np.float(coeff[coeff.rfind('ix')+2:coeff.rfind('iy')])/6.436409310e15 # a.u
-Iy2 = np.float(coeff[coeff.rfind('iy')+2:coeff.rfind('iz')])/6.436409310e15 # a.u
-Iz2 = np.float(coeff[coeff.rfind('iz')+2:coeff.rfind('_')])/6.436409310e15 # a.u
+Ix1 = float(coeff[coeff.find('ix')+2:coeff.find('iy')])/6.436409310e15 # a.u
+Iy1 = float(coeff[coeff.find('iy')+2:coeff.find('iz')])/6.436409310e15 # a.u
+Iz1 = float(coeff[coeff.find('iz')+2:coeff.rfind('_ix')])/6.436409310e15 # a.u
+Ix2 = float(coeff[coeff.rfind('ix')+2:coeff.rfind('iy')])/6.436409310e15 # a.u
+Iy2 = float(coeff[coeff.rfind('iy')+2:coeff.rfind('iz')])/6.436409310e15 # a.u
+Iz2 = float(coeff[coeff.rfind('iz')+2:coeff.rfind('_')])/6.436409310e15 # a.u
 
 # Potential depths for both particles in every direction:
 ####################################################
