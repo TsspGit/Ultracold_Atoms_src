@@ -5,12 +5,16 @@ from atomic_units import ao, vo, e, hbar, me, Eh, to
 import sys
 
 class Units_Transformer:
-    def __init__(self, lambd, coefER, alpha, m):
-        '''lambd: wavelength in nm
-           coefER: V = coef*ER
-           alpha: polarizability in u.a
-           I1: intensity in one direction in W/cm2
-           m: mass'''
+    def __init__(self, lambd1, lambd2, coefER, alpha1, alpha2, m1, m2):
+        ''' Class that transform the units used experimentally.
+       Parameters
+       ----------
+       lambd: wavelength in nm
+       coefER: V = coef*ER
+       alpha: polarizability in u.a
+       I1: intensity in one direction in W/cm2
+       m: mass
+       '''
         self.lambd = lambd * 1e-9 / ao
         self.k = 2*np.pi/self.lambd
         self.coefER = coefER
